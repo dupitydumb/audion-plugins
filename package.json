@@ -1,0 +1,9 @@
+{
+    "name": "audion-plugin-registry",
+    "version": "1.0.0",
+    "description": "Automated plugin registry for Audion",
+    "scripts": {
+        "build": "node scripts/build-registry.js"
+    },
+    "private": true
+}
