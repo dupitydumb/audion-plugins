@@ -1113,14 +1113,16 @@ Use semantic versioning and update when you make changes:
 ### Publishing Your Plugin
 
 1. **Create a GitHub repository** for your plugin
-2. **Add a README.md** with:
+2. **Add the `audion-plugins` topic** to your repository settings to ensure it is indexed in the marketplace
+3. **Add a README.md** with:
    - Description
    - Features
    - Installation instructions
    - Screenshots
    - License
-3. **Tag releases** using Git tags (e.g., `v1.0.0`)
-4. **Host plugin.json** with a `manifest_url` field pointing to the raw GitHub URL
+4. **Ensure your `plugin.json` is valid** and contains all necessary metadata for the marketplace indexer
+5. **Tag releases** using Git tags (e.g., `v1.0.0`)
+6. **Host plugin.json** with a `manifest_url` field pointing to the raw GitHub URL
 
 ### Example plugin.json with Updates
 
@@ -1285,17 +1287,3 @@ You now have everything you need to create powerful plugins for Audion! Start wi
 3. Share it with the community
 4. Contribute improvements to this guide
 
-### Resources
-
-- [Example Plugins](../plugin-examples/)
-- [Plugin Schema](../src/lib/plugins/schema.ts)
-- [Plugin Runtime](../src/lib/plugins/runtime.ts)
-- [GitHub Issues](https://github.com/yourusername/audion/issues)
-
-### Community
-
-- Found a bug? [Report it](https://github.com/yourusername/audion/issues)
-- Have a plugin idea? [Discuss it](https://github.com/yourusername/audion/discussions)
-- Created a plugin? [Share it](https://github.com/yourusername/audion-plugins)
-
-Happy coding! 🎵
