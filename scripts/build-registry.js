@@ -38,15 +38,20 @@ function httpsGet(options) {
 
 async function searchRepos() {
     console.log(`Searching GitHub for repos with topic: ${TOPIC}`);
-
+    
+    const headers = {
+        'User-Agent': 'Audion-Registry-Builder',
+        'Accept': 'application/vnd.github.v3+json'
+    };
+    
+    if (process.env.GITHUB_TOKEN) {
+        headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+    }
+    
     const options = {
         hostname: GITHUB_API,
         path: `/search/repositories?q=topic:${TOPIC}&sort=stars&order=desc&per_page=100`,
-        headers: {
-            'User-Agent': 'Audion-Registry-Builder',
-            'Accept': 'application/vnd.github.v3+json',
-            'Authorization': process.env.GITHUB_TOKEN ? `token ${process.env.GITHUB_TOKEN}` : undefined
-        }
+        headers
     };
 
     const response = await httpsGet(options);
