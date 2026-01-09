@@ -1,10 +1,8 @@
 name: Update Plugin Registry
-
 on:
   schedule:
-    # Run daily at midnight UTC
     - cron: '0 0 * * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   update-registry:
@@ -23,29 +21,14 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-
-      - name: Pull latest changes
-        run: git pull origin main
-      
-      - name: Commit registry changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add registry/main/registry.json
-          git commit -m "Auto-update plugin registry" || echo "No changes"
-      
-      - name: Push changes
-        run: git push origin main
       
       - name: Search and build registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/build-registry.js
       
-      - name: Commit and push if changed
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add registry/main/registry.json
-          git diff --staged --quiet || git commit -m "Auto-update plugin registry"
-          git push
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update plugin registry"
+          file_pattern: "registry/main/registry.json"
