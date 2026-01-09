@@ -16,7 +16,7 @@ const OUTPUT_PATH = path.join(__dirname, '..', 'registry', 'main', 'registry.jso
 // Required fields in plugin.json
 const REQUIRED_FIELDS = ['name', 'version', 'author', 'type', 'entry', 'permissions'];
 const VALID_TYPES = ['js', 'wasm'];
-const VALID_CATEGORIES = ['audio', 'ui', 'lyrics', 'library', 'utility'];
+const VALID_CATEGORIES = ['audio', 'ui', 'lyrics', 'library', 'utility', 'appearance'];
 
 function httpsGet(options) {
     return new Promise((resolve, reject) => {
@@ -196,3 +196,4 @@ buildRegistry().catch(err => {
     console.error('Failed to build registry:', err);
     process.exit(1);
 });
+
