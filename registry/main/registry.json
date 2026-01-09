@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-01-09T09:07:09.666Z",
+  "updated_at": "2026-01-09T09:18:30.458Z",
   "plugins": [
     {
       "manifest": {
@@ -63,6 +63,39 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-01-08T04:09:30Z"
+    },
+    {
+      "manifest": {
+        "name": "Theme Customizer",
+        "version": "1.0.0",
+        "author": "Audion Team",
+        "description": "Transform Audion's look with stunning visual themes - from cyberpunk neon to cozy warmth",
+        "repo": "https://github.com/dupitydumb/theme-customizer",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/theme-customizer/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "ui:inject",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/theme-customizer",
+        "category": "appearance",
+        "tags": [
+          "theme",
+          "customization",
+          "appearance",
+          "colors",
+          "ui"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/theme-customizer",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/theme-customizer/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-01-09T09:05:37Z"
     }
   ]
 }
