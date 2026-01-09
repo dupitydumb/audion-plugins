@@ -1,38 +1,7 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-01-08T04:02:23.649Z",
+  "updated_at": "2026-01-09T00:58:38.446Z",
   "plugins": [
-    {
-      "manifest": {
-        "name": "Play Counter",
-        "version": "1.0.0",
-        "author": "Audion Team",
-        "description": "Tracks how many times each song has been played",
-        "repo": "https://github.com/dupitydumb/play-counter",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/play-counter",
-        "category": "library",
-        "tags": [
-          "stats",
-          "play-count",
-          "analytics"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/play-counter",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-01-08T04:01:34Z"
-    },
     {
       "manifest": {
         "name": "Now Playing Notifier",
@@ -62,6 +31,38 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-01-08T03:57:29Z"
+    },
+    {
+      "manifest": {
+        "name": "Play Counter",
+        "version": "1.0.0",
+        "author": "Audion Team",
+        "description": "Tracks how many times each song has been played",
+        "repo": "https://github.com/dupitydumb/play-counter",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "storage:local",
+          "ui:inject"
+        ],
+        "homepage": "https://github.com/dupitydumb/play-counter",
+        "category": "library",
+        "tags": [
+          "stats",
+          "play-count",
+          "analytics"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/play-counter",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-01-08T04:09:30Z"
     }
   ]
 }
