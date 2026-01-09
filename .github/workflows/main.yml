@@ -23,6 +23,14 @@ jobs:
       
       - name: Install dependencies
         run: npm install
+
+      - name: Pull latest changes
+        run: | 
+          git pull --rebase origin main
+  
+      - name: Push changes
+        run: |
+          git push origin main
       
       - name: Search and build registry
         env:
