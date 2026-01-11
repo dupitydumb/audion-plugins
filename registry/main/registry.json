@@ -1,7 +1,44 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-01-11T01:03:24.173Z",
+  "updated_at": "2026-01-11T12:38:43.868Z",
   "plugins": [
+    {
+      "manifest": {
+        "name": "Tidal Search",
+        "version": "1.0.0",
+        "author": "Audion Team",
+        "description": "Search and browse tracks from the Tidal catalog",
+        "repo": "https://github.com/dupitydumb/tidal-search",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "homepage": "https://github.com/dupitydumb/tidal-search",
+        "category": "library",
+        "tags": [
+          "search",
+          "tidal",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/tidal-search",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-01-11T12:13:50Z"
+    },
     {
       "manifest": {
         "name": "Theme Customizer",
@@ -33,7 +70,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/theme-customizer/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-01-09T09:05:37Z"
+      "lastUpdated": "2026-01-11T12:12:22Z"
     },
     {
       "manifest": {
@@ -63,7 +100,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-01-08T03:57:29Z"
+      "lastUpdated": "2026-01-11T12:12:48Z"
     },
     {
       "manifest": {
@@ -95,7 +132,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-01-08T04:09:30Z"
+      "lastUpdated": "2026-01-11T12:11:48Z"
     }
   ]
 }
