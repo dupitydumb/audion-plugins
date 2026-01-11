@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-01-11T12:38:43.868Z",
+  "updated_at": "2026-01-11T16:24:17.140Z",
   "plugins": [
     {
       "manifest": {
@@ -38,6 +38,40 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-01-11T12:13:50Z"
+    },
+    {
+      "manifest": {
+        "name": "Spotify Converter",
+        "version": "1.0.0",
+        "author": "Audion Team",
+        "description": "Convert Spotify playlists to Audion playlists using Tidal",
+        "repo": "https://github.com/dupitydumb/spotify-to-audion",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "library:write",
+          "library:read"
+        ],
+        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
+        "category": "utility",
+        "tags": [
+          "converter",
+          "spotify",
+          "playlist",
+          "tidal"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/spotify-to-audion",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-01-11T16:23:04Z"
     },
     {
       "manifest": {
