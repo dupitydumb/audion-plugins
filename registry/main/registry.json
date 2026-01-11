@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-01-10T00:56:21.313Z",
+  "updated_at": "2026-01-11T01:03:24.173Z",
   "plugins": [
     {
       "manifest": {
@@ -37,6 +37,36 @@
     },
     {
       "manifest": {
+        "name": "Now Playing Notifier",
+        "version": "1.0.0",
+        "author": "Audion Team",
+        "description": "Shows system notifications when track changes",
+        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "system:notify"
+        ],
+        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "category": "utility",
+        "tags": [
+          "notification",
+          "now-playing"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-01-08T03:57:29Z"
+    },
+    {
+      "manifest": {
         "name": "Play Counter",
         "version": "1.0.0",
         "author": "Audion Team",
@@ -66,36 +96,6 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-01-08T04:09:30Z"
-    },
-    {
-      "manifest": {
-        "name": "Now Playing Notifier",
-        "version": "1.0.0",
-        "author": "Audion Team",
-        "description": "Shows system notifications when track changes",
-        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "system:notify"
-        ],
-        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "category": "utility",
-        "tags": [
-          "notification",
-          "now-playing"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-01-08T03:57:29Z"
     }
   ]
 }
