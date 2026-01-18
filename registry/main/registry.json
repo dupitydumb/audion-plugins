@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-01-18T16:32:24.633Z",
+  "updated_at": "2026-01-18T16:56:29.999Z",
   "plugins": [
     {
       "manifest": {
@@ -150,8 +150,6 @@
           "settings:write",
           "library:downloadTrack"
         ],
-        "ui_slots": null,
-        "icon": null,
         "homepage": "https://github.com/dupitydumb/tidal-search",
         "category": "library",
         "tags": [
@@ -168,7 +166,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-01-18T16:31:46Z"
+      "lastUpdated": "2026-01-18T16:55:59Z"
     }
   ]
 }
