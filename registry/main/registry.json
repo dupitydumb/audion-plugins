@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-01-30T01:06:49.330Z",
+  "updated_at": "2026-01-30T16:39:20.776Z",
   "plugins": [
     {
       "manifest": {
@@ -103,40 +103,6 @@
     },
     {
       "manifest": {
-        "name": "Spotify Converter",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Tidal",
-        "repo": "https://github.com/dupitydumb/spotify-to-audion",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "library:write",
-          "library:read"
-        ],
-        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
-        "category": "utility",
-        "tags": [
-          "converter",
-          "spotify",
-          "playlist",
-          "tidal"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/spotify-to-audion",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-01-30T00:49:49Z"
-    },
-    {
-      "manifest": {
         "name": "Theme Customizer",
         "version": "1.0.3",
         "author": "Audion Team",
@@ -167,6 +133,70 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-01-15T17:27:49Z"
+    },
+    {
+      "manifest": {
+        "name": "Spotify Converter",
+        "version": "1.0.1",
+        "author": "Audion Team",
+        "description": "Convert Spotify playlists to Audion playlists using Tidal",
+        "repo": "https://github.com/dupitydumb/spotify-to-audion",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
+        "category": "utility",
+        "tags": [
+          "converter",
+          "spotify",
+          "playlist",
+          "tidal"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/spotify-to-audion",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-01-30T16:36:42Z"
+    },
+    {
+      "manifest": {
+        "name": "Discord Rich Presence",
+        "version": "1.0.0",
+        "author": "Manga-Knights",
+        "description": "Show what you're listening to on Discord",
+        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read"
+        ],
+        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "category": "appearance",
+        "tags": [
+          "discord",
+          "rich-presence"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-01-30T16:37:48Z"
     }
   ]
 }
