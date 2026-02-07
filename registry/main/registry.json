@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-02-07T16:46:54.878Z",
+  "updated_at": "2026-02-07T16:52:07.809Z",
   "plugins": [
     {
       "manifest": {
@@ -106,37 +106,6 @@
     },
     {
       "manifest": {
-        "name": "Now Playing Notifier",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Shows system notifications when track changes",
-        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "system:notify",
-          "ui:inject"
-        ],
-        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "category": "utility",
-        "tags": [
-          "notification",
-          "now-playing"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-07T16:40:13Z"
-    },
-    {
-      "manifest": {
         "name": "Spotify Converter",
         "version": "1.0.2",
         "author": "Audion Team",
@@ -169,6 +138,37 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-07T16:41:09Z"
+    },
+    {
+      "manifest": {
+        "name": "Now Playing Notifier",
+        "version": "1.0.1",
+        "author": "Audion Team",
+        "description": "Shows system notifications when track changes",
+        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "system:notify",
+          "ui:inject"
+        ],
+        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "category": "utility",
+        "tags": [
+          "notification",
+          "now-playing"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-07T16:40:13Z"
     },
     {
       "manifest": {
@@ -218,8 +218,8 @@
           "settings:write",
           "library:downloadTrack"
         ],
-        "ui_slots": null,
-        "icon": null,
+        "ui_slots": [],
+        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg>",
         "homepage": "https://github.com/dupitydumb/qobuz-player",
         "category": "library",
         "tags": [
@@ -236,7 +236,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-02-07T16:46:29Z"
+      "lastUpdated": "2026-02-07T16:51:01Z"
     }
   ]
 }
