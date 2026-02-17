@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-02-17T01:10:47.169Z",
+  "updated_at": "2026-02-17T15:56:00.519Z",
   "plugins": [
     {
       "manifest": {
@@ -70,7 +70,7 @@
     {
       "manifest": {
         "name": "Tidal Search",
-        "version": "1.0.2",
+        "version": "2.0.2",
         "author": "Audion Team",
         "description": "Search and browse tracks from the Tidal catalog",
         "repo": "https://github.com/dupitydumb/tidal-search",
@@ -102,7 +102,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-02-13T16:41:51Z"
+      "lastUpdated": "2026-02-17T15:54:51Z"
     },
     {
       "manifest": {
@@ -138,7 +138,7 @@
     {
       "manifest": {
         "name": "Spotify Converter",
-        "version": "1.0.5",
+        "version": "2.0.2",
         "author": "Audion Team",
         "description": "Convert Spotify playlists to Audion playlists using Tidal",
         "repo": "https://github.com/dupitydumb/spotify-to-audion",
