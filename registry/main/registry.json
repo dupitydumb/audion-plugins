@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-02-18T04:38:40.308Z",
+  "updated_at": "2026-02-18T04:48:40.240Z",
   "plugins": [
     {
       "manifest": {
@@ -200,6 +200,45 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:41:35Z"
+    },
+    {
+      "manifest": {
+        "name": "Custom Cloud Source",
+        "version": "1.0.0",
+        "author": "You",
+        "description": "Connect any cloud storage, personal server, or media library as a music source. Supports URL patterns, HTTP headers, and custom auth — no coding required.",
+        "repo": "https://github.com/dupitydumb/could-stream",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/could-stream",
+        "category": "library",
+        "tags": [
+          "cloud",
+          "custom",
+          "server",
+          "streaming",
+          "s3",
+          "webdav",
+          "http"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/could-stream",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-18T04:47:55Z"
     },
     {
       "manifest": {
