@@ -138,7 +138,7 @@
     {
       "manifest": {
         "name": "Spotify Converter",
-        "version": "2.0.2",
+        "version": "2.0.3",
         "author": "Audion Team",
         "description": "Convert Spotify playlists to Audion playlists using Tidal",
         "repo": "https://github.com/dupitydumb/spotify-to-audion",
