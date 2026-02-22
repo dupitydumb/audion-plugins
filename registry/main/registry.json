@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-02-22T01:11:06.401Z",
+  "updated_at": "2026-02-22T16:43:41.354Z",
   "plugins": [
     {
       "manifest": {
@@ -37,6 +37,38 @@
     },
     {
       "manifest": {
+        "name": "Play Counter",
+        "version": "1.0.1",
+        "author": "Audion Team",
+        "description": "Tracks how many times each song has been played",
+        "repo": "https://github.com/dupitydumb/play-counter",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "storage:local",
+          "ui:inject"
+        ],
+        "homepage": "https://github.com/dupitydumb/play-counter",
+        "category": "library",
+        "tags": [
+          "stats",
+          "play-count",
+          "analytics"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/play-counter",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-13T16:42:07Z"
+    },
+    {
+      "manifest": {
         "name": "Tidal Search",
         "version": "2.0.3",
         "author": "Audion Team",
@@ -70,39 +102,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-02-17T15:54:51Z"
-    },
-    {
-      "manifest": {
-        "name": "Play Counter",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Tracks how many times each song has been played",
-        "repo": "https://github.com/dupitydumb/play-counter",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "storage:local",
-          "ui:inject"
-        ],
-        "homepage": "https://github.com/dupitydumb/play-counter",
-        "category": "library",
-        "tags": [
-          "stats",
-          "play-count",
-          "analytics"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/play-counter",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-13T16:42:07Z"
+      "lastUpdated": "2026-02-22T15:50:16Z"
     },
     {
       "manifest": {
@@ -137,41 +137,6 @@
     },
     {
       "manifest": {
-        "name": "Spotify Converter",
-        "version": "2.0.3",
-        "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Tidal",
-        "repo": "https://github.com/dupitydumb/spotify-to-audion",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
-        "category": "utility",
-        "tags": [
-          "converter",
-          "spotify",
-          "playlist",
-          "tidal"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/spotify-to-audion",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-17T15:56:23Z"
-    },
-    {
-      "manifest": {
         "name": "Now Playing Notifier",
         "version": "1.0.1",
         "author": "Audion Team",
@@ -203,42 +168,38 @@
     },
     {
       "manifest": {
-        "name": "Custom Cloud Source",
-        "version": "1.0.0",
-        "author": "You",
-        "description": "Connect any cloud storage, personal server, or media library as a music source. Supports URL patterns, HTTP headers, and custom auth — no coding required.",
-        "repo": "https://github.com/dupitydumb/could-stream",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
+        "name": "Spotify Converter",
+        "version": "2.0.3",
+        "author": "Audion Team",
+        "description": "Convert Spotify playlists to Audion playlists using Tidal",
+        "repo": "https://github.com/dupitydumb/spotify-to-audion",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
           "network:fetch",
           "ui:inject",
-          "player:control",
           "library:write",
           "library:read",
           "storage:local"
         ],
-        "homepage": "https://github.com/dupitydumb/could-stream",
-        "category": "library",
+        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
+        "category": "utility",
         "tags": [
-          "cloud",
-          "custom",
-          "server",
-          "streaming",
-          "s3",
-          "webdav",
-          "http"
+          "converter",
+          "spotify",
+          "playlist",
+          "tidal"
         ],
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/could-stream",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
-      "stars": 0,
+      "repo": "https://github.com/dupitydumb/spotify-to-audion",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+      "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-02-18T04:47:55Z"
+      "lastUpdated": "2026-02-22T16:05:53Z"
     },
     {
       "manifest": {
@@ -276,6 +237,45 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-18T05:27:41Z"
+    },
+    {
+      "manifest": {
+        "name": "Custom Cloud Source",
+        "version": "1.0.1",
+        "author": "M",
+        "description": "Connect any cloud storage, personal server, or media library as a music source. Supports URL patterns, HTTP headers, and custom auth — no coding required.",
+        "repo": "https://github.com/dupitydumb/could-stream",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/could-stream",
+        "category": "library",
+        "tags": [
+          "cloud",
+          "custom",
+          "server",
+          "streaming",
+          "s3",
+          "webdav",
+          "http"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/could-stream",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-22T09:25:07Z"
     },
     {
       "manifest": {
