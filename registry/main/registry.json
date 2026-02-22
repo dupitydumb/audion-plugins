@@ -38,7 +38,7 @@
     {
       "manifest": {
         "name": "Tidal Search",
-        "version": "2.0.2",
+        "version": "2.0.3",
         "author": "Audion Team",
         "description": "Search and browse tracks from the Tidal catalog",
         "repo": "https://github.com/dupitydumb/tidal-search",
