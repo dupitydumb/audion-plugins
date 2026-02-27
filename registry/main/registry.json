@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-02-26T08:41:50.938Z",
+  "updated_at": "2026-02-27T01:07:23.477Z",
   "plugins": [
     {
       "manifest": {
@@ -37,37 +37,6 @@
     },
     {
       "manifest": {
-        "name": "Now Playing Notifier",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Shows system notifications when track changes",
-        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "system:notify",
-          "ui:inject"
-        ],
-        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "category": "utility",
-        "tags": [
-          "notification",
-          "now-playing"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-13T16:41:35Z"
-    },
-    {
-      "manifest": {
         "name": "Discord Rich Presence",
         "version": "2.1.1",
         "author": "Manga-Knights",
@@ -96,6 +65,37 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-16T15:21:56Z"
+    },
+    {
+      "manifest": {
+        "name": "Now Playing Notifier",
+        "version": "1.0.1",
+        "author": "Audion Team",
+        "description": "Shows system notifications when track changes",
+        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "system:notify",
+          "ui:inject"
+        ],
+        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "category": "utility",
+        "tags": [
+          "notification",
+          "now-playing"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-13T16:41:35Z"
     },
     {
       "manifest": {
@@ -131,38 +131,6 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-22T16:05:53Z"
-    },
-    {
-      "manifest": {
-        "name": "Play Counter",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Tracks how many times each song has been played",
-        "repo": "https://github.com/dupitydumb/play-counter",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "storage:local",
-          "ui:inject"
-        ],
-        "homepage": "https://github.com/dupitydumb/play-counter",
-        "category": "library",
-        "tags": [
-          "stats",
-          "play-count",
-          "analytics"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/play-counter",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-13T16:42:07Z"
     },
     {
       "manifest": {
@@ -203,42 +171,35 @@
     },
     {
       "manifest": {
-        "name": "Qubuz Search",
-        "version": "1.0.0",
+        "name": "Play Counter",
+        "version": "1.0.1",
         "author": "Audion Team",
-        "description": "Search and browse tracks from the Qubuz catalog",
-        "repo": "https://github.com/dupitydumb/qobuz-player",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+        "description": "Tracks how many times each song has been played",
+        "repo": "https://github.com/dupitydumb/play-counter",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
+          "player:read",
+          "storage:local",
+          "ui:inject"
         ],
-        "ui_slots": [],
-        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg>",
-        "homepage": "https://github.com/dupitydumb/qobuz-player",
+        "homepage": "https://github.com/dupitydumb/play-counter",
         "category": "library",
         "tags": [
-          "search",
-          "qubuz",
-          "streaming",
-          "music"
+          "stats",
+          "play-count",
+          "analytics"
         ],
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/qobuz-player",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
-      "stars": 0,
+      "repo": "https://github.com/dupitydumb/play-counter",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+      "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-02-13T16:51:06Z"
+      "lastUpdated": "2026-02-13T16:42:07Z"
     },
     {
       "manifest": {
@@ -275,6 +236,45 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-18T04:38:13Z"
+    },
+    {
+      "manifest": {
+        "name": "Qubuz Search",
+        "version": "1.0.0",
+        "author": "Audion Team",
+        "description": "Search and browse tracks from the Qubuz catalog",
+        "repo": "https://github.com/dupitydumb/qobuz-player",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "ui_slots": [],
+        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg>",
+        "homepage": "https://github.com/dupitydumb/qobuz-player",
+        "category": "library",
+        "tags": [
+          "search",
+          "qubuz",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/qobuz-player",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-13T16:51:06Z"
     },
     {
       "manifest": {
