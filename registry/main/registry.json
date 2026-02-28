@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-02-28T01:01:53.988Z",
+  "updated_at": "2026-02-28T18:36:22.070Z",
   "plugins": [
     {
       "manifest": {
@@ -37,37 +37,6 @@
     },
     {
       "manifest": {
-        "name": "Discord Rich Presence",
-        "version": "2.1.1",
-        "author": "Manga-Knights",
-        "description": "Show what you're listening to on Discord",
-        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "category": "appearance",
-        "tags": [
-          "discord",
-          "rich-presence"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-16T15:21:56Z"
-    },
-    {
-      "manifest": {
         "name": "Now Playing Notifier",
         "version": "1.0.1",
         "author": "Audion Team",
@@ -99,38 +68,34 @@
     },
     {
       "manifest": {
-        "name": "Spotify Converter",
-        "version": "2.0.3",
-        "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Tidal",
-        "repo": "https://github.com/dupitydumb/spotify-to-audion",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "name": "Discord Rich Presence",
+        "version": "2.1.1",
+        "author": "Manga-Knights",
+        "description": "Show what you're listening to on Discord",
+        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
-          "network:fetch",
+          "player:read",
           "ui:inject",
-          "library:write",
-          "library:read",
           "storage:local"
         ],
-        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
-        "category": "utility",
+        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "category": "appearance",
         "tags": [
-          "converter",
-          "spotify",
-          "playlist",
-          "tidal"
+          "discord",
+          "rich-presence"
         ],
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/spotify-to-audion",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-02-22T16:05:53Z"
+      "lastUpdated": "2026-02-16T15:21:56Z"
     },
     {
       "manifest": {
@@ -171,6 +136,41 @@
     },
     {
       "manifest": {
+        "name": "Spotify Converter",
+        "version": "2.0.3",
+        "author": "Audion Team",
+        "description": "Convert Spotify playlists to Audion playlists using Tidal",
+        "repo": "https://github.com/dupitydumb/spotify-to-audion",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
+        "category": "utility",
+        "tags": [
+          "converter",
+          "spotify",
+          "playlist",
+          "tidal"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/spotify-to-audion",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-22T16:05:53Z"
+    },
+    {
+      "manifest": {
         "name": "Play Counter",
         "version": "1.0.1",
         "author": "Audion Team",
@@ -200,42 +200,6 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:42:07Z"
-    },
-    {
-      "manifest": {
-        "name": "Plex Search",
-        "version": "1.0.0",
-        "author": "You",
-        "description": "Browse and stream music from your Plex Media Server",
-        "repo": "https://github.com/dupitydumb/Plex-Search",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/Plex-Search",
-        "category": "library",
-        "tags": [
-          "plex",
-          "streaming",
-          "cloud",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Plex-Search",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-02-18T04:38:13Z"
     },
     {
       "manifest": {
@@ -278,6 +242,42 @@
     },
     {
       "manifest": {
+        "name": "Plex Search",
+        "version": "1.0.0",
+        "author": "You",
+        "description": "Browse and stream music from your Plex Media Server",
+        "repo": "https://github.com/dupitydumb/Plex-Search",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/Plex-Search",
+        "category": "library",
+        "tags": [
+          "plex",
+          "streaming",
+          "cloud",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Plex-Search",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-18T04:38:13Z"
+    },
+    {
+      "manifest": {
         "name": "Custom Cloud Source",
         "version": "1.0.1",
         "author": "M",
@@ -314,6 +314,42 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-22T09:25:07Z"
+    },
+    {
+      "manifest": {
+        "name": "Last.fm Scrobbler",
+        "version": "2.0.0",
+        "author": "You",
+        "description": "Scrobbles your listening history to Last.fm. Supports real-time now-playing, offline queue, and one-click import of your existing Audion play history.",
+        "repo": "https://github.com/dupitydumb/last.fm-scrobbler",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/last.fm-scrobbler/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:read",
+          "storage:local",
+          "library:read"
+        ],
+        "homepage": "https://github.com/dupitydumb/last.fm-scrobbler",
+        "category": "utility",
+        "tags": [
+          "lastfm",
+          "scrobble",
+          "history",
+          "stats",
+          "social"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/last.fm-scrobbler",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/last.fm-scrobbler/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-28T18:35:30Z"
     },
     {
       "manifest": {
