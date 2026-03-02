@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-01T01:16:48.663Z",
+  "updated_at": "2026-03-02T01:09:04.414Z",
   "plugins": [
     {
       "manifest": {
@@ -37,37 +37,6 @@
     },
     {
       "manifest": {
-        "name": "Discord Rich Presence",
-        "version": "2.1.1",
-        "author": "Manga-Knights",
-        "description": "Show what you're listening to on Discord",
-        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "category": "appearance",
-        "tags": [
-          "discord",
-          "rich-presence"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-16T15:21:56Z"
-    },
-    {
-      "manifest": {
         "name": "Now Playing Notifier",
         "version": "1.0.1",
         "author": "Audion Team",
@@ -96,6 +65,37 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:41:35Z"
+    },
+    {
+      "manifest": {
+        "name": "Discord Rich Presence",
+        "version": "2.1.1",
+        "author": "Manga-Knights",
+        "description": "Show what you're listening to on Discord",
+        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "ui:inject",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "category": "appearance",
+        "tags": [
+          "discord",
+          "rich-presence"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-16T15:21:56Z"
     },
     {
       "manifest": {
@@ -203,42 +203,6 @@
     },
     {
       "manifest": {
-        "name": "Plex Search",
-        "version": "1.0.0",
-        "author": "You",
-        "description": "Browse and stream music from your Plex Media Server",
-        "repo": "https://github.com/dupitydumb/Plex-Search",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/Plex-Search",
-        "category": "library",
-        "tags": [
-          "plex",
-          "streaming",
-          "cloud",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Plex-Search",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-02-18T04:38:13Z"
-    },
-    {
-      "manifest": {
         "name": "Qubuz Search",
         "version": "1.0.0",
         "author": "Audion Team",
@@ -275,6 +239,42 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:51:06Z"
+    },
+    {
+      "manifest": {
+        "name": "Plex Search",
+        "version": "1.0.0",
+        "author": "You",
+        "description": "Browse and stream music from your Plex Media Server",
+        "repo": "https://github.com/dupitydumb/Plex-Search",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/Plex-Search",
+        "category": "library",
+        "tags": [
+          "plex",
+          "streaming",
+          "cloud",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Plex-Search",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-18T04:38:13Z"
     },
     {
       "manifest": {
