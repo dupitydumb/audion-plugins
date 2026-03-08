@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-07T01:05:07.543Z",
+  "updated_at": "2026-03-08T01:10:19.606Z",
   "plugins": [
     {
       "manifest": {
@@ -105,37 +105,6 @@
     },
     {
       "manifest": {
-        "name": "Now Playing Notifier",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Shows system notifications when track changes",
-        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "system:notify",
-          "ui:inject"
-        ],
-        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "category": "utility",
-        "tags": [
-          "notification",
-          "now-playing"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-13T16:41:35Z"
-    },
-    {
-      "manifest": {
         "name": "Spotify Converter",
         "version": "2.0.3",
         "author": "Audion Team",
@@ -200,6 +169,37 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:42:07Z"
+    },
+    {
+      "manifest": {
+        "name": "Now Playing Notifier",
+        "version": "1.0.1",
+        "author": "Audion Team",
+        "description": "Shows system notifications when track changes",
+        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "system:notify",
+          "ui:inject"
+        ],
+        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "category": "utility",
+        "tags": [
+          "notification",
+          "now-playing"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-13T16:41:35Z"
     },
     {
       "manifest": {
@@ -271,45 +271,6 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-18T04:38:13Z"
-    },
-    {
-      "manifest": {
-        "name": "Qubuz Search",
-        "version": "1.0.0",
-        "author": "Audion Team",
-        "description": "Search and browse tracks from the Qubuz catalog",
-        "repo": "https://github.com/dupitydumb/qobuz-player",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
-        ],
-        "ui_slots": [],
-        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg>",
-        "homepage": "https://github.com/dupitydumb/qobuz-player",
-        "category": "library",
-        "tags": [
-          "search",
-          "qubuz",
-          "streaming",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/qobuz-player",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-02-13T16:51:06Z"
     },
     {
       "manifest": {
@@ -422,6 +383,45 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-24T09:31:52Z"
+    },
+    {
+      "manifest": {
+        "name": "Qubuz Search",
+        "version": "2.0.0",
+        "author": "Audion Team & Smile Of Heaven",
+        "description": "Search and browse tracks from the Qubuz catalog",
+        "repo": "https://github.com/dupitydumb/qobuz-player",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "ui_slots": [],
+        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg>",
+        "homepage": "https://github.com/dupitydumb/qobuz-player",
+        "category": "library",
+        "tags": [
+          "search",
+          "qubuz",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/qobuz-player",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-03-07T21:28:05Z"
     }
   ]
 }
