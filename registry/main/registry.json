@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-08T17:36:23.797Z",
+  "updated_at": "2026-03-09T01:10:17.872Z",
   "plugins": [
     {
       "manifest": {
@@ -227,7 +227,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-03-08T17:36:00Z"
+      "lastUpdated": "2026-03-08T17:41:11Z"
     },
     {
       "manifest": {
