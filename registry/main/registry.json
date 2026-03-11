@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-10T01:04:24.356Z",
+  "updated_at": "2026-03-11T01:05:29.171Z",
   "plugins": [
     {
       "manifest": {
@@ -65,41 +65,6 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-16T15:21:56Z"
-    },
-    {
-      "manifest": {
-        "name": "Spotify Converter",
-        "version": "2.0.3",
-        "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Tidal",
-        "repo": "https://github.com/dupitydumb/spotify-to-audion",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
-        "category": "utility",
-        "tags": [
-          "converter",
-          "spotify",
-          "playlist",
-          "tidal"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/spotify-to-audion",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-03-02T09:18:37Z"
     },
     {
       "manifest": {
@@ -169,6 +134,41 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-03-09T18:23:58Z"
+    },
+    {
+      "manifest": {
+        "name": "Spotify Converter",
+        "version": "2.0.3",
+        "author": "Audion Team",
+        "description": "Convert Spotify playlists to Audion playlists using Tidal",
+        "repo": "https://github.com/dupitydumb/spotify-to-audion",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
+        "category": "utility",
+        "tags": [
+          "converter",
+          "spotify",
+          "playlist",
+          "tidal"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/spotify-to-audion",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-03-02T09:18:37Z"
     },
     {
       "manifest": {
@@ -302,6 +302,43 @@
     },
     {
       "manifest": {
+        "name": "Online Radio",
+        "version": "1.0.0",
+        "author": "You",
+        "description": "Stream hundreds of live radio stations from around the world, grouped by region and country. Includes genre filtering, favorites, and custom station support.",
+        "repo": "https://github.com/dupitydumb/Radio-Stream",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "player:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/Radio-Stream",
+        "category": "library",
+        "tags": [
+          "radio",
+          "live",
+          "streaming",
+          "online",
+          "stations",
+          "world"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Radio-Stream",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-24T09:31:52Z"
+    },
+    {
+      "manifest": {
         "name": "Custom Cloud Source",
         "version": "1.0.1",
         "author": "M",
@@ -374,43 +411,6 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-28T18:35:30Z"
-    },
-    {
-      "manifest": {
-        "name": "Online Radio",
-        "version": "1.0.0",
-        "author": "You",
-        "description": "Stream hundreds of live radio stations from around the world, grouped by region and country. Includes genre filtering, favorites, and custom station support.",
-        "repo": "https://github.com/dupitydumb/Radio-Stream",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "player:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/Radio-Stream",
-        "category": "library",
-        "tags": [
-          "radio",
-          "live",
-          "streaming",
-          "online",
-          "stations",
-          "world"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Radio-Stream",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-02-24T09:31:52Z"
     },
     {
       "manifest": {
