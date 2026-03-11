@@ -231,41 +231,6 @@
     },
     {
       "manifest": {
-        "name": "Spotify Converter test",
-        "version": "2.0.4",
-        "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Tidal",
-        "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-        "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/SmileofHaven/audion-spotify-test",
-        "category": "utility",
-        "tags": [
-          "converter",
-          "spotify",
-          "playlist",
-          "tidal"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-      "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-03-04T06:07:16Z"
-    },
-    {
-      "manifest": {
         "name": "Plex Search",
         "version": "1.0.0",
         "author": "You",
