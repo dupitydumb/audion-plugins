@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-16T23:36:57.340Z",
+  "updated_at": "2026-03-17T02:40:54.197Z",
   "plugins": [
     {
       "manifest": {
@@ -68,6 +68,38 @@
     },
     {
       "manifest": {
+        "name": "Play Counter",
+        "version": "1.0.1",
+        "author": "Audion Team",
+        "description": "Tracks how many times each song has been played",
+        "repo": "https://github.com/dupitydumb/play-counter",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "storage:local",
+          "ui:inject"
+        ],
+        "homepage": "https://github.com/dupitydumb/play-counter",
+        "category": "library",
+        "tags": [
+          "stats",
+          "play-count",
+          "analytics"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/play-counter",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-13T16:42:07Z"
+    },
+    {
+      "manifest": {
         "name": "Spotify Converter",
         "version": "2.0.3",
         "author": "Audion Team",
@@ -100,38 +132,6 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-03-02T09:18:37Z"
-    },
-    {
-      "manifest": {
-        "name": "Play Counter",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Tracks how many times each song has been played",
-        "repo": "https://github.com/dupitydumb/play-counter",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "storage:local",
-          "ui:inject"
-        ],
-        "homepage": "https://github.com/dupitydumb/play-counter",
-        "category": "library",
-        "tags": [
-          "stats",
-          "play-count",
-          "analytics"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/play-counter",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-13T16:42:07Z"
     },
     {
       "manifest": {
