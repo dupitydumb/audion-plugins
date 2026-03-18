@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-18T15:11:44.261Z",
+  "updated_at": "2026-03-18T17:10:21.033Z",
   "plugins": [
     {
       "manifest": {
@@ -68,43 +68,6 @@
     },
     {
       "manifest": {
-        "name": "Tidal Search",
-        "version": "2.0.6",
-        "author": "Audion Team",
-        "description": "Search and browse tracks from the Tidal catalog",
-        "repo": "https://github.com/dupitydumb/tidal-search",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
-        ],
-        "homepage": "https://github.com/dupitydumb/tidal-search",
-        "category": "library",
-        "tags": [
-          "search",
-          "tidal",
-          "streaming",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/tidal-search",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-03-09T18:23:58Z"
-    },
-    {
-      "manifest": {
         "name": "Play Counter",
         "version": "1.0.1",
         "author": "Audion Team",
@@ -169,6 +132,43 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-03-02T09:18:37Z"
+    },
+    {
+      "manifest": {
+        "name": "Tidal Search",
+        "version": "2.0.6",
+        "author": "Audion Team",
+        "description": "Search and browse tracks from the Tidal catalog",
+        "repo": "https://github.com/dupitydumb/tidal-search",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "homepage": "https://github.com/dupitydumb/tidal-search",
+        "category": "library",
+        "tags": [
+          "search",
+          "tidal",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/tidal-search",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-03-09T18:23:58Z"
     },
     {
       "manifest": {
