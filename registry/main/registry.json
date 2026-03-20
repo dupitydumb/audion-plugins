@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-20T19:42:37.412Z",
+  "updated_at": "2026-03-20T20:40:44.897Z",
   "plugins": [
     {
       "manifest": {
@@ -302,43 +302,6 @@
     },
     {
       "manifest": {
-        "name": "Online Radio",
-        "version": "1.0.0",
-        "author": "You",
-        "description": "Stream hundreds of live radio stations from around the world, grouped by region and country. Includes genre filtering, favorites, and custom station support.",
-        "repo": "https://github.com/dupitydumb/Radio-Stream",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "player:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/Radio-Stream",
-        "category": "library",
-        "tags": [
-          "radio",
-          "live",
-          "streaming",
-          "online",
-          "stations",
-          "world"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Radio-Stream",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-02-24T09:31:52Z"
-    },
-    {
-      "manifest": {
         "name": "Last.fm Scrobbler",
         "version": "2.0.0",
         "author": "You",
@@ -411,6 +374,43 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-22T09:25:07Z"
+    },
+    {
+      "manifest": {
+        "name": "Online Radio",
+        "version": "1.0.0",
+        "author": "You",
+        "description": "Stream hundreds of live radio stations from around the world, grouped by region and country. Includes genre filtering, favorites, and custom station support.",
+        "repo": "https://github.com/dupitydumb/Radio-Stream",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "player:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/Radio-Stream",
+        "category": "library",
+        "tags": [
+          "radio",
+          "live",
+          "streaming",
+          "online",
+          "stations",
+          "world"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Radio-Stream",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-24T09:31:52Z"
     },
     {
       "manifest": {
