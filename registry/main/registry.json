@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-21T19:30:48.613Z",
+  "updated_at": "2026-03-21T20:34:46.454Z",
   "plugins": [
     {
       "manifest": {
@@ -238,44 +238,6 @@
     },
     {
       "manifest": {
-        "name": "Saavan Search",
-        "version": "0.0.1",
-        "author": "Praise The Fool",
-        "description": "Search the Saavan",
-        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
-        ],
-        "ui_slots": [],
-        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "category": "library",
-        "tags": [
-          "search",
-          "saavan",
-          "streaming",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-03-21T15:12:42Z"
-    },
-    {
-      "manifest": {
         "name": "Cover Fetch",
         "version": "1.0.0",
         "author": "Audion Community",
@@ -337,43 +299,6 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-18T04:38:13Z"
-    },
-    {
-      "manifest": {
-        "name": "Online Radio",
-        "version": "1.0.0",
-        "author": "You",
-        "description": "Stream hundreds of live radio stations from around the world, grouped by region and country. Includes genre filtering, favorites, and custom station support.",
-        "repo": "https://github.com/dupitydumb/Radio-Stream",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "player:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/Radio-Stream",
-        "category": "library",
-        "tags": [
-          "radio",
-          "live",
-          "streaming",
-          "online",
-          "stations",
-          "world"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Radio-Stream",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-02-24T09:31:52Z"
     },
     {
       "manifest": {
@@ -449,6 +374,43 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-22T09:25:07Z"
+    },
+    {
+      "manifest": {
+        "name": "Online Radio",
+        "version": "1.0.0",
+        "author": "You",
+        "description": "Stream hundreds of live radio stations from around the world, grouped by region and country. Includes genre filtering, favorites, and custom station support.",
+        "repo": "https://github.com/dupitydumb/Radio-Stream",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "player:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/Radio-Stream",
+        "category": "library",
+        "tags": [
+          "radio",
+          "live",
+          "streaming",
+          "online",
+          "stations",
+          "world"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Radio-Stream",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-24T09:31:52Z"
     },
     {
       "manifest": {
