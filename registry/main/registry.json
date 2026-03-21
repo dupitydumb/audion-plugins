@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-21T14:33:36.591Z",
+  "updated_at": "2026-03-21T15:32:41.624Z",
   "plugins": [
     {
       "manifest": {
@@ -411,6 +411,44 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-22T09:25:07Z"
+    },
+    {
+      "manifest": {
+        "name": "Saavan Search",
+        "version": "0.0.1",
+        "author": "Praise The Fool",
+        "description": "Search the Saavan",
+        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "ui_slots": [],
+        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "category": "library",
+        "tags": [
+          "search",
+          "saavan",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-03-21T15:12:42Z"
     },
     {
       "manifest": {
