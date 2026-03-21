@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-21T15:32:41.624Z",
+  "updated_at": "2026-03-21T16:37:51.411Z",
   "plugins": [
     {
       "manifest": {
@@ -34,6 +34,37 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:41:09Z"
+    },
+    {
+      "manifest": {
+        "name": "Discord Rich Presence",
+        "version": "2.1.1",
+        "author": "Manga-Knights",
+        "description": "Show what you're listening to on Discord",
+        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "ui:inject",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "category": "appearance",
+        "tags": [
+          "discord",
+          "rich-presence"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-16T15:21:56Z"
     },
     {
       "manifest": {
@@ -71,37 +102,6 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-03-09T18:23:58Z"
-    },
-    {
-      "manifest": {
-        "name": "Discord Rich Presence",
-        "version": "2.1.1",
-        "author": "Manga-Knights",
-        "description": "Show what you're listening to on Discord",
-        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "category": "appearance",
-        "tags": [
-          "discord",
-          "rich-presence"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-16T15:21:56Z"
     },
     {
       "manifest": {
@@ -302,6 +302,44 @@
     },
     {
       "manifest": {
+        "name": "Saavan Search",
+        "version": "0.0.1",
+        "author": "Praise The Fool",
+        "description": "Search the Saavan",
+        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "ui_slots": [],
+        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "category": "library",
+        "tags": [
+          "search",
+          "saavan",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-03-21T15:12:42Z"
+    },
+    {
+      "manifest": {
         "name": "Online Radio",
         "version": "1.0.0",
         "author": "You",
@@ -411,44 +449,6 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-22T09:25:07Z"
-    },
-    {
-      "manifest": {
-        "name": "Saavan Search",
-        "version": "0.0.1",
-        "author": "Praise The Fool",
-        "description": "Search the Saavan",
-        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
-        ],
-        "ui_slots": [],
-        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "category": "library",
-        "tags": [
-          "search",
-          "saavan",
-          "streaming",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-03-21T15:12:42Z"
     },
     {
       "manifest": {
