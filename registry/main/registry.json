@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-23T17:00:32.818Z",
+  "updated_at": "2026-03-23T19:03:36.291Z",
   "plugins": [
     {
       "manifest": {
@@ -34,37 +34,6 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:41:09Z"
-    },
-    {
-      "manifest": {
-        "name": "Discord Rich Presence",
-        "version": "2.1.1",
-        "author": "Manga-Knights",
-        "description": "Show what you're listening to on Discord",
-        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "category": "appearance",
-        "tags": [
-          "discord",
-          "rich-presence"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-16T15:21:56Z"
     },
     {
       "manifest": {
@@ -140,6 +109,37 @@
     },
     {
       "manifest": {
+        "name": "Discord Rich Presence",
+        "version": "2.1.1",
+        "author": "Manga-Knights",
+        "description": "Show what you're listening to on Discord",
+        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "ui:inject",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "category": "appearance",
+        "tags": [
+          "discord",
+          "rich-presence"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-16T15:21:56Z"
+    },
+    {
+      "manifest": {
         "name": "Play Counter",
         "version": "1.0.1",
         "author": "Audion Team",
@@ -203,6 +203,34 @@
     },
     {
       "manifest": {
+        "name": "Cover Fetch",
+        "version": "1.0.0",
+        "author": "Audion Community",
+        "description": "Automatically fetch missing album covers from musichoarders.xyz",
+        "repo": "https://github.com/dupitydumb/cover-fetch",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "library:read",
+          "library:write",
+          "network:fetch",
+          "ui:inject",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/cover-fetch",
+        "category": "library"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/cover-fetch",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-03-08T17:41:11Z"
+    },
+    {
+      "manifest": {
         "name": "Spotify Converter test",
         "version": "2.0.4",
         "author": "Audion Team",
@@ -235,34 +263,6 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-03-16T13:32:57Z"
-    },
-    {
-      "manifest": {
-        "name": "Cover Fetch",
-        "version": "1.0.0",
-        "author": "Audion Community",
-        "description": "Automatically fetch missing album covers from musichoarders.xyz",
-        "repo": "https://github.com/dupitydumb/cover-fetch",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "library:read",
-          "library:write",
-          "network:fetch",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/cover-fetch",
-        "category": "library"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/cover-fetch",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-03-08T17:41:11Z"
     },
     {
       "manifest": {
