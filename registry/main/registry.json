@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-03-26T23:38:51.938Z",
+  "updated_at": "2026-03-27T02:55:10.924Z",
   "plugins": [
     {
       "manifest": {
@@ -74,37 +74,6 @@
     },
     {
       "manifest": {
-        "name": "Discord Rich Presence",
-        "version": "2.1.1",
-        "author": "Manga-Knights",
-        "description": "Show what you're listening to on Discord",
-        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
-        "category": "appearance",
-        "tags": [
-          "discord",
-          "rich-presence"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-16T15:21:56Z"
-    },
-    {
-      "manifest": {
         "name": "Spotify Converter",
         "version": "2.0.3",
         "author": "Audion Team",
@@ -137,6 +106,37 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-03-02T09:18:37Z"
+    },
+    {
+      "manifest": {
+        "name": "Discord Rich Presence",
+        "version": "2.1.1",
+        "author": "Manga-Knights",
+        "description": "Show what you're listening to on Discord",
+        "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "ui:inject",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
+        "category": "appearance",
+        "tags": [
+          "discord",
+          "rich-presence"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-16T15:21:56Z"
     },
     {
       "manifest": {
