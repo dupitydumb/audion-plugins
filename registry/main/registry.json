@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-04-07T19:14:14.930Z",
+  "updated_at": "2026-04-07T20:55:54.979Z",
   "plugins": [
     {
       "manifest": {
@@ -203,34 +203,6 @@
     },
     {
       "manifest": {
-        "name": "Cover Fetch",
-        "version": "1.0.0",
-        "author": "Audion Community",
-        "description": "Automatically fetch missing album covers from musichoarders.xyz",
-        "repo": "https://github.com/dupitydumb/cover-fetch",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "library:read",
-          "library:write",
-          "network:fetch",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/cover-fetch",
-        "category": "library"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/cover-fetch",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-03-08T17:41:11Z"
-    },
-    {
-      "manifest": {
         "name": "Spotify Converter test",
         "version": "2.0.4",
         "author": "Audion Team",
@@ -263,6 +235,34 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-03-16T13:32:57Z"
+    },
+    {
+      "manifest": {
+        "name": "Cover Fetch",
+        "version": "1.0.0",
+        "author": "Audion Community",
+        "description": "Automatically fetch missing album covers from musichoarders.xyz",
+        "repo": "https://github.com/dupitydumb/cover-fetch",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "library:read",
+          "library:write",
+          "network:fetch",
+          "ui:inject",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/cover-fetch",
+        "category": "library"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/cover-fetch",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-03-08T17:41:11Z"
     },
     {
       "manifest": {
