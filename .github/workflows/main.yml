@@ -2,8 +2,6 @@ name: Update Plugin Registry
 
 on:
   workflow_dispatch:   # Allows manual run button
-  schedule:
-    - cron: "0 * * * *"  # optional: run every hour
 
 jobs:
   update-registry:
