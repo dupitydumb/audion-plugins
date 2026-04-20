@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-04-20T06:41:17.045Z",
+  "updated_at": "2026-04-20T06:48:11.637Z",
   "plugins": [
     {
       "manifest": {
@@ -68,41 +68,6 @@
     },
     {
       "manifest": {
-        "name": "Spotify Converter",
-        "version": "2.0.3",
-        "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Tidal",
-        "repo": "https://github.com/dupitydumb/spotify-to-audion",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
-        "category": "utility",
-        "tags": [
-          "converter",
-          "spotify",
-          "playlist",
-          "tidal"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/spotify-to-audion",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-03-02T09:18:37Z"
-    },
-    {
-      "manifest": {
         "name": "Now Playing Notifier",
         "version": "1.0.1",
         "author": "Audion Team",
@@ -163,6 +128,41 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:42:07Z"
+    },
+    {
+      "manifest": {
+        "name": "Spotify Converter",
+        "version": "2.0.3",
+        "author": "Audion Team",
+        "description": "Convert Spotify playlists to Audion playlists using Tidal",
+        "repo": "https://github.com/dupitydumb/spotify-to-audion",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
+        "category": "utility",
+        "tags": [
+          "converter",
+          "spotify",
+          "playlist",
+          "tidal"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/spotify-to-audion",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-03-02T09:18:37Z"
     },
     {
       "manifest": {
@@ -450,6 +450,39 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-24T09:31:52Z"
+    },
+    {
+      "manifest": {
+        "name": "Lyrics Romanization",
+        "version": "0.1.0",
+        "author": "Audion Community",
+        "description": "Displays romanized lyrics in a synced plugin panel",
+        "repo": "https://github.com/dupitydumb/lyrics-romanization",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "ui:inject",
+          "storage:local",
+          "network:fetch"
+        ],
+        "homepage": "https://github.com/dupitydumb/lyrics-romanization",
+        "category": "appearance",
+        "tags": [
+          "lyrics",
+          "romanization",
+          "japanese"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/lyrics-romanization",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-04-20T06:47:57Z"
     }
   ]
 }
