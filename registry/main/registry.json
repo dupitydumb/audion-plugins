@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-04-25T06:51:18.036Z",
+  "updated_at": "2026-04-25T17:47:38.555Z",
   "plugins": [
     {
       "manifest": {
@@ -99,43 +99,6 @@
     },
     {
       "manifest": {
-        "name": "Tidal Search",
-        "version": "2.0.9",
-        "author": "Audion Team",
-        "description": "Search and browse tracks from the Tidal catalog",
-        "repo": "https://github.com/dupitydumb/tidal-search",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
-        ],
-        "homepage": "https://github.com/dupitydumb/tidal-search",
-        "category": "library",
-        "tags": [
-          "search",
-          "tidal",
-          "streaming",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/tidal-search",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-04-19T14:21:23Z"
-    },
-    {
-      "manifest": {
         "name": "Play Counter",
         "version": "1.0.1",
         "author": "Audion Team",
@@ -204,6 +167,44 @@
     },
     {
       "manifest": {
+        "name": "Saavan Search",
+        "version": "0.0.1",
+        "author": "Golden Sparrow",
+        "description": "Search the Saavan",
+        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "ui_slots": [],
+        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "category": "library",
+        "tags": [
+          "search",
+          "saavan",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
+      "stars": 2,
+      "downloads": 0,
+      "lastUpdated": "2026-04-25T07:51:05Z"
+    },
+    {
+      "manifest": {
         "name": "Spotify Converter",
         "version": "2.0.3",
         "author": "Audion Team",
@@ -239,6 +240,43 @@
     },
     {
       "manifest": {
+        "name": "Tidal Search",
+        "version": "2.0.9",
+        "author": "Audion Team",
+        "description": "Search and browse tracks from the Tidal catalog",
+        "repo": "https://github.com/dupitydumb/tidal-search",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "homepage": "https://github.com/dupitydumb/tidal-search",
+        "category": "library",
+        "tags": [
+          "search",
+          "tidal",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/tidal-search",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/tidal-search/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-04-25T17:47:14Z"
+    },
+    {
+      "manifest": {
         "name": "Cover Fetch",
         "version": "1.0.0",
         "author": "Audion Community",
@@ -267,10 +305,10 @@
     },
     {
       "manifest": {
-        "name": "Spotify Converter test",
-        "version": "2.0.4",
-        "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Tidal",
+        "name": "Test Plugin. DO NOT INSTALL",
+        "version": "2.0.5",
+        "author": "Smile of Heaven",
+        "description": "plugin made for testing and experimenting. do not install",
         "repo": "https://github.com/SmileofHaven/audion-spotify-test",
         "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
         "type": "js",
@@ -285,10 +323,7 @@
         "homepage": "https://github.com/SmileofHaven/audion-spotify-test",
         "category": "utility",
         "tags": [
-          "converter",
-          "spotify",
-          "playlist",
-          "tidal"
+          "test"
         ],
         "license": "MIT"
       },
@@ -298,7 +333,7 @@
       "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-03-16T13:32:57Z"
+      "lastUpdated": "2026-04-25T13:24:31Z"
     },
     {
       "manifest": {
@@ -335,44 +370,6 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-18T04:38:13Z"
-    },
-    {
-      "manifest": {
-        "name": "Saavan Search",
-        "version": "0.0.1",
-        "author": "Golden Sparrow",
-        "description": "Search the Saavan",
-        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
-        ],
-        "ui_slots": [],
-        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "category": "library",
-        "tags": [
-          "search",
-          "saavan",
-          "streaming",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-04-25T05:04:18Z"
     },
     {
       "manifest": {
