@@ -1,7 +1,45 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-04-25T17:51:03.821Z",
+  "updated_at": "2026-05-05T14:39:59.284Z",
   "plugins": [
+    {
+      "manifest": {
+        "name": "Saavan Search",
+        "version": "0.1.0",
+        "author": "Golden Sparrow",
+        "description": "Search the Saavan",
+        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "ui_slots": [],
+        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "category": "library",
+        "tags": [
+          "search",
+          "saavan",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
+      "stars": 2,
+      "downloads": 0,
+      "lastUpdated": "2026-04-27T14:06:36Z"
+    },
     {
       "manifest": {
         "name": "Theme Customizer",
@@ -68,37 +106,6 @@
     },
     {
       "manifest": {
-        "name": "Now Playing Notifier",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Shows system notifications when track changes",
-        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "system:notify",
-          "ui:inject"
-        ],
-        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "category": "utility",
-        "tags": [
-          "notification",
-          "now-playing"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-02-13T16:41:35Z"
-    },
-    {
-      "manifest": {
         "name": "Play Counter",
         "version": "1.0.1",
         "author": "Audion Team",
@@ -128,6 +135,37 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:42:07Z"
+    },
+    {
+      "manifest": {
+        "name": "Now Playing Notifier",
+        "version": "1.0.1",
+        "author": "Audion Team",
+        "description": "Shows system notifications when track changes",
+        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "system:notify",
+          "ui:inject"
+        ],
+        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "category": "utility",
+        "tags": [
+          "notification",
+          "now-playing"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-13T16:41:35Z"
     },
     {
       "manifest": {
@@ -163,52 +201,14 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/last.fm-scrobbler/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-04-24T09:37:17Z"
-    },
-    {
-      "manifest": {
-        "name": "Saavan Search",
-        "version": "0.0.1",
-        "author": "Golden Sparrow",
-        "description": "Search the Saavan",
-        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
-        ],
-        "ui_slots": [],
-        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "category": "library",
-        "tags": [
-          "search",
-          "saavan",
-          "streaming",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-      "stars": 2,
-      "downloads": 0,
-      "lastUpdated": "2026-04-25T07:51:05Z"
+      "lastUpdated": "2026-04-27T10:30:19Z"
     },
     {
       "manifest": {
         "name": "Spotify Converter",
-        "version": "2.0.3",
+        "version": "2.0.4",
         "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Tidal",
+        "description": "Convert Spotify playlists to Audion playlists using JioSaavn",
         "repo": "https://github.com/dupitydumb/spotify-to-audion",
         "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
         "type": "js",
@@ -226,7 +226,9 @@
           "converter",
           "spotify",
           "playlist",
-          "tidal"
+          "tidal",
+          "saavan",
+          "jiosaavn"
         ],
         "license": "MIT"
       },
@@ -236,7 +238,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-03-02T09:18:37Z"
+      "lastUpdated": "2026-04-26T14:47:50Z"
     },
     {
       "manifest": {
@@ -265,38 +267,6 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-03-08T17:41:11Z"
-    },
-    {
-      "manifest": {
-        "name": "Test Plugin. DO NOT INSTALL",
-        "version": "2.0.5",
-        "author": "Smile of Heaven",
-        "description": "plugin made for testing and experimenting. do not install",
-        "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-        "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/SmileofHaven/audion-spotify-test",
-        "category": "utility",
-        "tags": [
-          "test"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-      "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-04-25T13:24:31Z"
     },
     {
       "manifest": {
@@ -336,42 +306,35 @@
     },
     {
       "manifest": {
-        "name": "Qubuz Search",
-        "version": "2.1.2",
-        "author": "Audion Team & Smile Of Heaven",
-        "description": "Search and browse tracks from the Qubuz catalog",
-        "repo": "https://github.com/dupitydumb/qobuz-player",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+        "name": "Test Plugin. DO NOT INSTALL",
+        "version": "2.0.5",
+        "author": "Smile of Heaven",
+        "description": "plugin made for testing and experimenting. do not install",
+        "repo": "https://github.com/SmileofHaven/audion-spotify-test",
+        "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
           "network:fetch",
           "ui:inject",
-          "player:control",
           "library:write",
           "library:read",
-          "settings:write",
-          "library:downloadTrack"
+          "storage:local"
         ],
-        "ui_slots": [],
-        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg>",
-        "homepage": "https://github.com/dupitydumb/qobuz-player",
-        "category": "library",
+        "homepage": "https://github.com/SmileofHaven/audion-spotify-test",
+        "category": "utility",
         "tags": [
-          "search",
-          "qubuz",
-          "streaming",
-          "music"
+          "test"
         ],
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/qobuz-player",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+      "repo": "https://github.com/SmileofHaven/audion-spotify-test",
+      "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-03-16T20:11:33Z"
+      "lastUpdated": "2026-04-25T13:24:31Z"
     },
     {
       "manifest": {
@@ -412,6 +375,45 @@
     },
     {
       "manifest": {
+        "name": "Qubuz Search",
+        "version": "2.1.3",
+        "author": "Audion Team & Smile Of Heaven",
+        "description": "Search and browse tracks from the Qubuz catalog",
+        "repo": "https://github.com/dupitydumb/qobuz-player",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "ui_slots": [],
+        "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg>",
+        "homepage": "https://github.com/dupitydumb/qobuz-player",
+        "category": "library",
+        "tags": [
+          "search",
+          "qubuz",
+          "streaming",
+          "music"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/qobuz-player",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-04-27T11:51:33Z"
+    },
+    {
+      "manifest": {
         "name": "Custom Cloud Source",
         "version": "1.0.1",
         "author": "M",
@@ -448,6 +450,40 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-02-22T09:25:07Z"
+    },
+    {
+      "manifest": {
+        "name": "Saavan Manager",
+        "version": "0.1.0",
+        "author": "Antigravity",
+        "description": "Scan library for non-Saavan songs and find Saavan versions.",
+        "repo": "https://github.com/dupitydumb/saavan-manager",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/saavan-manager/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "library:read",
+          "library:write",
+          "network:fetch",
+          "ui:inject",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/saavan-manager",
+        "category": "utility",
+        "tags": [
+          "saavan",
+          "library",
+          "manager",
+          "converter"
+        ]
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/saavan-manager",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/saavan-manager/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-05-05T14:39:18Z"
     },
     {
       "manifest": {
