@@ -1,0 +1,78 @@
+name: Update Plugin Stats
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Update Registry Stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node -e "
+          const fs = require('fs');
+          const https = require('https');
+
+          const fetch = (url) => new Promise((resolve, reject) => {
+            const options = {
+              headers: { 'User-Agent': 'Audion-Stats-Bot', 'Authorization': 'token ' + process.env.GITHUB_TOKEN }
+            };
+            https.get(url, options, (res) => {
+              let data = '';
+              res.on('data', chunk => data += chunk);
+              res.on('end', () => resolve(JSON.parse(data)));
+            }).on('error', reject);
+          });
+
+          async function run() {
+            const path = 'registry/main/registry.json';
+            const registry = JSON.parse(fs.readFileSync(path, 'utf8'));
+
+            for (const plugin of registry.plugins) {
+              if (plugin.repo && plugin.repo.includes('github.com')) {
+                const match = plugin.repo.match(/github\.com\/([^/]+)\/([^/]+)/);
+                if (match) {
+                  const [_, owner, repo] = match;
+                  const cleanRepo = repo.replace('.git', '');
+                  
+                  console.log('Fetching stats for ' + owner + '/' + cleanRepo);
+                  
+                  // Fetch Stars
+                  const repoData = await fetch('https://api.github.com/repos/' + owner + '/' + cleanRepo);
+                  plugin.stars = repoData.stargazers_count || 0;
+
+                  // Fetch Release Downloads
+                  const releases = await fetch('https://api.github.com/repos/' + owner + '/' + cleanRepo + '/releases');
+                  let downloads = 0;
+                  if (Array.isArray(releases)) {
+                    releases.forEach(r => {
+                      r.assets.forEach(a => downloads += a.download_count);
+                    });
+                  }
+                  plugin.downloads = downloads;
+                }
+              }
+            }
+
+            fs.writeFileSync(path, JSON.stringify(registry, null, 2));
+          }
+          run();
+          "
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add registry/main/registry.json
+          git commit -m "chore: update plugin statistics [skip ci]" || exit 0
+          git push
