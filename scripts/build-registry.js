@@ -16,7 +16,7 @@ const OUTPUT_PATH = path.join(__dirname, '..', 'registry', 'main', 'registry.jso
 // Required fields in plugin.json
 const REQUIRED_FIELDS = ['name', 'version', 'author', 'type', 'entry', 'permissions'];
 const VALID_TYPES = ['js', 'wasm'];
-const VALID_CATEGORIES = ['audio', 'ui', 'lyrics', 'library', 'utility', 'appearance'];
+const VALID_CATEGORIES = ['audio', 'ui', 'lyrics', 'library', 'utility', 'appearance', 'social', 'sync'];
 
 function httpsGet(options) {
     return new Promise((resolve, reject) => {
@@ -36,9 +36,8 @@ function httpsGet(options) {
     });
 }
 
-async function searchRepos() {
-    console.log(`Searching GitHub for repos with topic: ${TOPIC}`);
-    
+// Helper for GitHub API requests with auth
+async function githubFetch(path) {
     const headers = {
         'User-Agent': 'Audion-Registry-Builder',
         'Accept': 'application/vnd.github.v3+json'
@@ -50,11 +49,16 @@ async function searchRepos() {
     
     const options = {
         hostname: GITHUB_API,
-        path: `/search/repositories?q=topic:${TOPIC}&sort=stars&order=desc&per_page=100`,
+        path,
         headers
     };
 
-    const response = await httpsGet(options);
+    return await httpsGet(options);
+}
+
+async function searchRepos() {
+    console.log(`Searching GitHub for repos with topic: ${TOPIC}`);
+    const response = await githubFetch(`/search/repositories?q=topic:${TOPIC}&sort=stars&order=desc&per_page=100`);
 
     if (response.status !== 200) {
         throw new Error(`GitHub API error: ${response.status}`);
@@ -62,6 +66,25 @@ async function searchRepos() {
 
     console.log(`Found ${response.data.total_count} repos`);
     return response.data.items || [];
+}
+
+async function fetchReleaseDownloads(repo) {
+    console.log(`  📊 Fetching release downloads for ${repo.full_name}...`);
+    const response = await githubFetch(`/repos/${repo.full_name}/releases`);
+    
+    if (response.status !== 200) return 0;
+    
+    let totalDownloads = 0;
+    if (Array.isArray(response.data)) {
+        for (const release of response.data) {
+            if (release.assets && Array.isArray(release.assets)) {
+                for (const asset of release.assets) {
+                    totalDownloads += (asset.download_count || 0);
+                }
+            }
+        }
+    }
+    return totalDownloads;
 }
 
 async function fetchPluginManifest(repo) {
@@ -104,11 +127,6 @@ function validateManifest(manifest) {
         return { valid: false, error: 'Permissions must be an array' };
     }
 
-    // Validate category if present
-    if (manifest.category && !VALID_CATEGORIES.includes(manifest.category)) {
-        return { valid: false, error: `Invalid category: ${manifest.category}` };
-    }
-
     return { valid: true };
 }
 
@@ -136,6 +154,9 @@ async function buildRegistry() {
 
             console.log(`  ✅ Valid plugin: ${manifest.name}`);
 
+            // Fetch live stats
+            const downloads = await fetchReleaseDownloads(repo);
+
             // Build plugin entry
             plugins.push({
                 manifest: {
@@ -151,7 +172,7 @@ async function buildRegistry() {
                     ui_slots: manifest.ui_slots,
                     icon: manifest.icon,
                     homepage: manifest.homepage || repo.html_url,
-                    category: manifest.category,
+                    category: manifest.category || 'utility',
                     tags: manifest.tags,
                     license: manifest.license || repo.license?.spdx_id
                 },
@@ -160,7 +181,7 @@ async function buildRegistry() {
                 repo: repo.html_url,
                 manifest_url: `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch}/plugin.json`,
                 stars: repo.stargazers_count,
-                downloads: 0, // Would need separate tracking
+                downloads: downloads,
                 lastUpdated: repo.updated_at
             });
 
@@ -186,6 +207,7 @@ async function buildRegistry() {
     fs.writeFileSync(OUTPUT_PATH, JSON.stringify(registry, null, 2));
 
     console.log(`\n✅ Registry built with ${plugins.length} plugins`);
+    console.log(`   Total plugins processed: ${repos.length}`);
     console.log(`   Written to: ${OUTPUT_PATH}`);
 
     return registry;
@@ -196,4 +218,3 @@ buildRegistry().catch(err => {
     console.error('Failed to build registry:', err);
     process.exit(1);
 });
-
