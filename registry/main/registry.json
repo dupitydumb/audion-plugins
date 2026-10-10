@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-05-09T17:08:01.828Z",
+  "updated_at": "2026-10-10T06:53:35.398Z",
   "plugins": [
     {
       "manifest": {
         "name": "Saavan Search",
-        "version": "0.1.1",
+        "version": "0.1.2",
         "author": "Golden Sparrow",
         "description": "Search the Saavan",
         "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
@@ -38,7 +38,7 @@
       "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
       "stars": 2,
       "downloads": 0,
-      "lastUpdated": "2026-05-09T15:05:32Z"
+      "lastUpdated": "2026-07-03T09:27:38Z"
     },
     {
       "manifest": {
@@ -71,13 +71,13 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/theme-customizer/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-02-13T16:41:09Z"
+      "lastUpdated": "2026-07-07T12:48:44Z"
     },
     {
       "manifest": {
         "name": "Discord Rich Presence",
-        "version": "2.1.1",
-        "author": "Manga-Knights",
+        "version": "3.0.0",
+        "author": "Manga-Knights & Reclusive",
         "description": "Show what you're listening to on Discord",
         "repo": "https://github.com/dupitydumb/audion-discord-rich-presence",
         "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
@@ -86,8 +86,11 @@
         "permissions": [
           "player:read",
           "ui:inject",
-          "storage:local"
+          "storage:local",
+          "network:fetch"
         ],
+        "ui_slots": null,
+        "icon": "rpc.png",
         "homepage": "https://github.com/dupitydumb/audion-discord-rich-presence",
         "category": "appearance",
         "tags": [
@@ -102,7 +105,38 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-02-16T15:21:56Z"
+      "lastUpdated": "2026-07-03T13:31:19Z"
+    },
+    {
+      "manifest": {
+        "name": "Now Playing Notifier",
+        "version": "1.0.1",
+        "author": "Audion Team",
+        "description": "Shows system notifications when track changes",
+        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "system:notify",
+          "ui:inject"
+        ],
+        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
+        "category": "utility",
+        "tags": [
+          "notification",
+          "now-playing"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-13T16:41:35Z"
     },
     {
       "manifest": {
@@ -135,6 +169,42 @@
       "stars": 1,
       "downloads": 0,
       "lastUpdated": "2026-02-13T16:42:07Z"
+    },
+    {
+      "manifest": {
+        "name": "Spotify Converter",
+        "version": "2.0.6",
+        "author": "Audion Team",
+        "description": "Convert Spotify playlists to Audion playlists using Plugins",
+        "repo": "https://github.com/dupitydumb/spotify-to-audion",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "ui_slots": null,
+        "icon": "icon.png",
+        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
+        "category": "utility",
+        "tags": [
+          "converter",
+          "spotify",
+          "playlist"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/spotify-to-audion",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-05-09T17:16:50Z"
     },
     {
       "manifest": {
@@ -174,12 +244,12 @@
     },
     {
       "manifest": {
-        "name": "Spotify Converter",
+        "name": "Test Plugin. DO NOT INSTALL",
         "version": "2.0.5",
-        "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Plugins",
-        "repo": "https://github.com/dupitydumb/spotify-to-audion",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "author": "Smile of Heaven",
+        "description": "plugin made for testing and experimenting. do not install",
+        "repo": "https://github.com/SmileofHaven/audion-spotify-test",
+        "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
@@ -189,53 +259,142 @@
           "library:read",
           "storage:local"
         ],
-        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
+        "homepage": "https://github.com/SmileofHaven/audion-spotify-test",
         "category": "utility",
         "tags": [
-          "converter",
-          "spotify",
-          "playlist"
+          "test"
         ],
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/spotify-to-audion",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-      "stars": 1,
+      "repo": "https://github.com/SmileofHaven/audion-spotify-test",
+      "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
+      "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-05-09T14:58:29Z"
+      "lastUpdated": "2026-04-25T13:24:31Z"
     },
     {
       "manifest": {
-        "name": "Now Playing Notifier",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Shows system notifications when track changes",
-        "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
+        "name": "Spotify Universal Importer",
+        "version": "2.1.1",
+        "author": "Kesavaraj",
+        "description": "High-speed Spotify importer supporting entire playlists (no 500-song limit), albums, and single tracks with custom save destination.",
+        "repo": "https://github.com/kesavarajsamipillai/spotify-universal-importer",
+        "manifest_url": "https://raw.githubusercontent.com/kesavarajsamipillai/spotify-universal-importer/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "library:write",
+          "library:read",
+          "storage:local",
+          "player:read",
+          "player:control",
+          "system:notify"
+        ],
+        "homepage": "https://github.com/kesavarajsamipillai/spotify-universal-importer",
+        "category": "utility",
+        "tags": [
+          "spotify",
+          "importer",
+          "playlist",
+          "converter",
+          "single-track",
+          "downloader"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/kesavarajsamipillai/spotify-universal-importer",
+      "manifest_url": "https://raw.githubusercontent.com/kesavarajsamipillai/spotify-universal-importer/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-09-29T18:58:44Z"
+    },
+    {
+      "manifest": {
+        "name": "Universal Music Source",
+        "version": "1.2.0",
+        "author": "kipavy",
+        "description": "Aggregate streaming from multiple sources (Monochrome, Hi-Fi API, Ultramax Deezer, Qobuz) with smart fallback for lossless audio",
+        "repo": "https://github.com/kipavy/audion-universal-music-source",
+        "manifest_url": "https://raw.githubusercontent.com/kipavy/audion-universal-music-source/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
           "player:read",
-          "system:notify",
-          "ui:inject"
+          "player:control",
+          "library:read",
+          "library:write",
+          "network:fetch",
+          "ui:inject",
+          "storage:local",
+          "system:notify"
         ],
-        "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
-        "category": "utility",
+        "homepage": "https://github.com/kipavy/audion-universal-music-source",
+        "category": "audio",
         "tags": [
-          "notification",
-          "now-playing"
+          "streaming",
+          "lossless",
+          "flac",
+          "multi-source",
+          "tidal",
+          "qobuz",
+          "deezer",
+          "amazon-music"
         ],
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/Now-Playing-Notifier",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
-      "stars": 1,
+      "repo": "https://github.com/kipavy/audion-universal-music-source",
+      "manifest_url": "https://raw.githubusercontent.com/kipavy/audion-universal-music-source/main/plugin.json",
+      "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-02-13T16:41:35Z"
+      "lastUpdated": "2026-08-03T15:37:14Z"
+    },
+    {
+      "manifest": {
+        "name": "Audion Companion",
+        "version": "1.0.0",
+        "author": "Kesavaraj",
+        "description": "All-in-one companion plugin for Audion featuring a music stream resolver, real-time canvas visualizer, sleep timer, and scrobbler analytics.",
+        "repo": "https://github.com/kesavarajsamipillai/audion-companion",
+        "manifest_url": "https://raw.githubusercontent.com/kesavarajsamipillai/audion-companion/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "player:control",
+          "library:read",
+          "library:write",
+          "ui:inject",
+          "storage:local",
+          "network:fetch",
+          "system:notify"
+        ],
+        "homepage": "https://github.com/kesavarajsamipillai/audion-companion",
+        "category": "utility",
+        "tags": [
+          "visualizer",
+          "streaming",
+          "resolver",
+          "sleep-timer",
+          "scrobbler",
+          "utility"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/kesavarajsamipillai/audion-companion",
+      "manifest_url": "https://raw.githubusercontent.com/kesavarajsamipillai/audion-companion/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-09-29T13:57:35Z"
     },
     {
       "manifest": {
@@ -303,35 +462,42 @@
     },
     {
       "manifest": {
-        "name": "Test Plugin. DO NOT INSTALL",
-        "version": "2.0.5",
-        "author": "Smile of Heaven",
-        "description": "plugin made for testing and experimenting. do not install",
-        "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-        "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
+        "name": "Qubuz Search",
+        "version": "2.1.6",
+        "author": "Audion Team & Smile Of Heaven",
+        "description": "Search and browse tracks from the Qubuz catalog",
+        "repo": "https://github.com/dupitydumb/qobuz-player",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
           "network:fetch",
           "ui:inject",
+          "player:control",
           "library:write",
           "library:read",
-          "storage:local"
+          "settings:write",
+          "library:downloadTrack"
         ],
-        "homepage": "https://github.com/SmileofHaven/audion-spotify-test",
-        "category": "utility",
+        "ui_slots": [],
+        "icon": "icon.png",
+        "homepage": "https://github.com/dupitydumb/qobuz-player",
+        "category": "library",
         "tags": [
-          "test"
+          "search",
+          "qubuz",
+          "streaming",
+          "music"
         ],
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-      "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
+      "repo": "https://github.com/dupitydumb/qobuz-player",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-04-25T13:24:31Z"
+      "lastUpdated": "2026-06-19T06:15:43Z"
     },
     {
       "manifest": {
@@ -372,42 +538,36 @@
     },
     {
       "manifest": {
-        "name": "Custom Cloud Source",
-        "version": "1.0.1",
-        "author": "M",
-        "description": "Connect any cloud storage, personal server, or media library as a music source. Supports URL patterns, HTTP headers, and custom auth — no coding required.",
-        "repo": "https://github.com/dupitydumb/could-stream",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
+        "name": "Lyrics Romanization",
+        "version": "0.1.0",
+        "author": "Audion Community",
+        "description": "Displays romanized lyrics in a synced plugin panel",
+        "repo": "https://github.com/dupitydumb/lyrics-romanization",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
-          "network:fetch",
+          "player:read",
           "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "storage:local"
+          "storage:local",
+          "network:fetch"
         ],
-        "homepage": "https://github.com/dupitydumb/could-stream",
-        "category": "library",
+        "homepage": "https://github.com/dupitydumb/lyrics-romanization",
+        "category": "appearance",
         "tags": [
-          "cloud",
-          "custom",
-          "server",
-          "streaming",
-          "s3",
-          "webdav",
-          "http"
+          "lyrics",
+          "romanization",
+          "japanese"
         ],
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/could-stream",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
+      "repo": "https://github.com/dupitydumb/lyrics-romanization",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-02-22T09:25:07Z"
+      "lastUpdated": "2026-04-20T06:51:28Z"
     },
     {
       "manifest": {
@@ -445,45 +605,12 @@
     },
     {
       "manifest": {
-        "name": "Lyrics Romanization",
-        "version": "0.1.0",
-        "author": "Audion Community",
-        "description": "Displays romanized lyrics in a synced plugin panel",
-        "repo": "https://github.com/dupitydumb/lyrics-romanization",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "ui:inject",
-          "storage:local",
-          "network:fetch"
-        ],
-        "homepage": "https://github.com/dupitydumb/lyrics-romanization",
-        "category": "appearance",
-        "tags": [
-          "lyrics",
-          "romanization",
-          "japanese"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/lyrics-romanization",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-04-20T06:51:28Z"
-    },
-    {
-      "manifest": {
-        "name": "Qubuz Search",
-        "version": "2.1.5",
-        "author": "Audion Team & Smile Of Heaven",
-        "description": "Search and browse tracks from the Qubuz catalog",
-        "repo": "https://github.com/dupitydumb/qobuz-player",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+        "name": "Custom Cloud Source",
+        "version": "1.0.1",
+        "author": "M",
+        "description": "Connect any cloud storage, personal server, or media library as a music source. Supports URL patterns, HTTP headers, and custom auth — no coding required.",
+        "repo": "https://github.com/dupitydumb/could-stream",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
@@ -492,28 +619,28 @@
           "player:control",
           "library:write",
           "library:read",
-          "settings:write",
-          "library:downloadTrack"
+          "storage:local"
         ],
-        "ui_slots": [],
-        "icon": "icon.png",
-        "homepage": "https://github.com/dupitydumb/qobuz-player",
+        "homepage": "https://github.com/dupitydumb/could-stream",
         "category": "library",
         "tags": [
-          "search",
-          "qubuz",
+          "cloud",
+          "custom",
+          "server",
           "streaming",
-          "music"
+          "s3",
+          "webdav",
+          "http"
         ],
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/qobuz-player",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+      "repo": "https://github.com/dupitydumb/could-stream",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-05-09T17:07:29Z"
+      "lastUpdated": "2026-02-22T09:25:07Z"
     }
   ]
 }
