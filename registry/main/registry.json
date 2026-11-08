@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-11-08T15:54:35.359Z",
+  "updated_at": "2026-11-08T15:57:43.391Z",
   "plugins": [
     {
       "manifest": {
@@ -645,7 +645,7 @@
     {
       "manifest": {
         "name": "YouTube Music",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "author": "Audion Community",
         "description": "Full YouTube Music client — browse Home, Hot Tracks, Trending, search artists/albums/playlists, import playlists from URLs, play and save tracks. Uses YouTube Music InnerTube API (WEB_REMIX) + Piped/Invidious/InnerTube stream fallback chain. No API key required.",
         "repo": "https://github.com/dupitydumb/youtub-music",
@@ -687,7 +687,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/youtub-music/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-11-08T15:53:54Z"
+      "lastUpdated": "2026-11-08T15:57:18Z"
     }
   ]
 }
