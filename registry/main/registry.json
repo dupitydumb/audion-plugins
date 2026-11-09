@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-11-08T17:37:57.738Z",
+  "updated_at": "2026-11-09T07:52:04.815Z",
   "plugins": [
     {
       "manifest": {
@@ -284,66 +284,6 @@
     },
     {
       "manifest": {
-        "name": "Test Plugin. DO NOT INSTALL",
-        "version": "2.0.5",
-        "author": "Smile of Heaven",
-        "description": "plugin made for testing and experimenting. do not install",
-        "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-        "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/SmileofHaven/audion-spotify-test",
-        "category": "utility",
-        "tags": [
-          "test"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-      "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-04-25T13:24:31Z"
-    },
-    {
-      "manifest": {
-        "name": "Cover Fetch",
-        "version": "1.0.0",
-        "author": "Audion Community",
-        "description": "Automatically fetch missing album covers from musichoarders.xyz",
-        "repo": "https://github.com/dupitydumb/cover-fetch",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "library:read",
-          "library:write",
-          "network:fetch",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/cover-fetch",
-        "category": "library"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/cover-fetch",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-03-08T17:41:11Z"
-    },
-    {
-      "manifest": {
         "name": "Audion Companion",
         "version": "1.0.0",
         "author": "Kesavaraj",
@@ -381,6 +321,66 @@
       "stars": 0,
       "downloads": 0,
       "lastUpdated": "2026-09-29T13:57:35Z"
+    },
+    {
+      "manifest": {
+        "name": "Cover Fetch",
+        "version": "1.0.0",
+        "author": "Audion Community",
+        "description": "Automatically fetch missing album covers from musichoarders.xyz",
+        "repo": "https://github.com/dupitydumb/cover-fetch",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "library:read",
+          "library:write",
+          "network:fetch",
+          "ui:inject",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/dupitydumb/cover-fetch",
+        "category": "library"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/cover-fetch",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-03-08T17:41:11Z"
+    },
+    {
+      "manifest": {
+        "name": "Test Plugin. DO NOT INSTALL",
+        "version": "2.0.5",
+        "author": "Smile of Heaven",
+        "description": "plugin made for testing and experimenting. do not install",
+        "repo": "https://github.com/SmileofHaven/audion-spotify-test",
+        "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "homepage": "https://github.com/SmileofHaven/audion-spotify-test",
+        "category": "utility",
+        "tags": [
+          "test"
+        ],
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/SmileofHaven/audion-spotify-test",
+      "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-04-25T13:24:31Z"
     },
     {
       "manifest": {
@@ -645,7 +645,7 @@
     {
       "manifest": {
         "name": "YouTube Music",
-        "version": "1.2.1",
+        "version": "1.3.0",
         "author": "Audion Community",
         "description": "Full YouTube Music client — browse Home, Hot Tracks, Trending, search artists/albums/playlists, import playlists from URLs, play and save tracks. Uses YouTube Music InnerTube API (WEB_REMIX) + Piped/Invidious/InnerTube stream fallback chain. No API key required.",
         "repo": "https://github.com/dupitydumb/youtub-music",
@@ -687,7 +687,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/youtub-music/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-11-08T17:37:23Z"
+      "lastUpdated": "2026-11-09T07:50:32Z"
     }
   ]
 }
