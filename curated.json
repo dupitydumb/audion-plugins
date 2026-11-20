@@ -8,5 +8,14 @@
         "note": "Internal note, published as `note` on the entry",
         "name / description / category / tags / homepage / icon": "Override the value from the plugin's own plugin.json"
     },
-    "plugins": {}
+    "plugins": {
+        "https://github.com/dupitydumb/youtub-music": {
+            "curated": true,
+            "verified": true
+        },
+        "https://github.com/dupitydumb/itunes-meta": {
+            "curated": true,
+            "verified": true
+        }
+    }
 }
