@@ -1,45 +1,7 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-11-19T14:42:39.519Z",
+  "updated_at": "2026-11-20T06:44:44.494Z",
   "plugins": [
-    {
-      "manifest": {
-        "name": "Saavan Search",
-        "version": "0.1.2",
-        "author": "Golden Sparrow",
-        "description": "Search the Saavan",
-        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
-        ],
-        "ui_slots": [],
-        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "category": "library",
-        "tags": [
-          "search",
-          "saavan",
-          "streaming",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
-      "stars": 2,
-      "downloads": 0,
-      "lastUpdated": "2026-07-03T09:27:38Z"
-    },
     {
       "manifest": {
         "name": "Discord Rich Presence",
@@ -64,6 +26,7 @@
           "discord",
           "rich-presence"
         ],
+        "min_version": null,
         "license": "MIT"
       },
       "curated": false,
@@ -72,72 +35,192 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/audion-discord-rich-presence/main/plugin.json",
       "stars": 2,
       "downloads": 0,
-      "lastUpdated": "2026-11-01T11:02:58Z"
+      "lastUpdated": "2026-07-03T13:31:14Z"
     },
     {
       "manifest": {
-        "name": "Theme Customizer",
-        "version": "1.0.3",
-        "author": "Audion Team",
-        "description": "Transform Audion's look with stunning visual themes - from cyberpunk neon to cozy warmth",
-        "repo": "https://github.com/dupitydumb/theme-customizer",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/theme-customizer/main/plugin.json",
+        "name": "Custom Cloud Source",
+        "version": "1.0.1",
+        "author": "M",
+        "description": "Connect any cloud storage, personal server, or media library as a music source. Supports URL patterns, HTTP headers, and custom auth — no coding required.",
+        "repo": "https://github.com/dupitydumb/could-stream",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
+          "network:fetch",
           "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
           "storage:local"
         ],
-        "homepage": "https://github.com/dupitydumb/theme-customizer",
-        "category": "appearance",
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/could-stream",
+        "category": "library",
         "tags": [
-          "theme",
-          "customization",
-          "appearance",
-          "colors",
-          "ui"
+          "cloud",
+          "custom",
+          "server",
+          "streaming",
+          "s3",
+          "webdav",
+          "http"
         ],
+        "min_version": null,
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/theme-customizer",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/theme-customizer/main/plugin.json",
-      "stars": 1,
+      "repo": "https://github.com/dupitydumb/could-stream",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
+      "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-07-07T12:48:44Z"
+      "lastUpdated": "2026-02-22T09:25:03Z"
     },
     {
       "manifest": {
-        "name": "Play Counter",
-        "version": "1.0.1",
-        "author": "Audion Team",
-        "description": "Tracks how many times each song has been played",
-        "repo": "https://github.com/dupitydumb/play-counter",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+        "name": "Cover Fetch",
+        "version": "1.0.0",
+        "author": "Audion Community",
+        "description": "Automatically fetch missing album covers from musichoarders.xyz",
+        "repo": "https://github.com/dupitydumb/cover-fetch",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "library:read",
+          "library:write",
+          "network:fetch",
+          "ui:inject",
+          "storage:local"
+        ],
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/cover-fetch",
+        "category": "library",
+        "tags": [],
+        "min_version": null,
+        "license": null
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/cover-fetch",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-03-08T17:41:08Z"
+    },
+    {
+      "manifest": {
+        "name": "iTunes Metadata",
+        "version": "1.0.0",
+        "author": "Audion Community",
+        "description": "Reference MetadataProvider searching global catalogs, fetching high-res covers, and providing rich track, album, and artist metadata.",
+        "repo": "https://github.com/dupitydumb/itunes-meta",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/itunes-meta/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "storage:local"
+        ],
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/itunes-meta",
+        "category": "metadata",
+        "tags": [
+          "metadata",
+          "catalog",
+          "search",
+          "cover-art"
+        ],
+        "min_version": null,
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/itunes-meta",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/itunes-meta/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-11-19T14:17:08Z"
+    },
+    {
+      "manifest": {
+        "name": "Last.fm Scrobbler",
+        "version": "2.0.1",
+        "author": "You",
+        "description": "Scrobbles your listening history to Last.fm. Supports real-time now-playing, offline queue, and one-click import of your existing Audion play history.",
+        "repo": "https://github.com/dupitydumb/last.fm-scrobbler",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/last.fm-scrobbler/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:read",
+          "storage:local",
+          "library:read"
+        ],
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/last.fm-scrobbler",
+        "category": "utility",
+        "tags": [
+          "lastfm",
+          "scrobble",
+          "history",
+          "stats",
+          "social"
+        ],
+        "min_version": null,
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/last.fm-scrobbler",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/last.fm-scrobbler/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-04-27T10:30:12Z"
+    },
+    {
+      "manifest": {
+        "name": "Lyrics Romanization",
+        "version": "0.1.0",
+        "author": "Audion Community",
+        "description": "Displays romanized lyrics in a synced plugin panel",
+        "repo": "https://github.com/dupitydumb/lyrics-romanization",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
           "player:read",
+          "ui:inject",
           "storage:local",
-          "ui:inject"
+          "network:fetch"
         ],
-        "homepage": "https://github.com/dupitydumb/play-counter",
-        "category": "library",
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/lyrics-romanization",
+        "category": "appearance",
         "tags": [
-          "stats",
-          "play-count",
-          "analytics"
+          "lyrics",
+          "romanization",
+          "japanese"
         ],
+        "min_version": null,
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/play-counter",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
-      "stars": 1,
+      "repo": "https://github.com/dupitydumb/lyrics-romanization",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
+      "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-02-13T16:42:07Z"
+      "lastUpdated": "2026-04-20T06:51:24Z"
     },
     {
       "manifest": {
@@ -154,12 +237,15 @@
           "system:notify",
           "ui:inject"
         ],
+        "ui_slots": null,
+        "icon": null,
         "homepage": "https://github.com/dupitydumb/Now-Playing-Notifier",
         "category": "utility",
         "tags": [
           "notification",
           "now-playing"
         ],
+        "min_version": null,
         "license": "MIT"
       },
       "curated": false,
@@ -168,7 +254,272 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Now-Playing-Notifier/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-02-13T16:41:35Z"
+      "lastUpdated": "2026-02-13T16:41:31Z"
+    },
+    {
+      "manifest": {
+        "name": "Play Counter",
+        "version": "1.0.1",
+        "author": "Audion Team",
+        "description": "Tracks how many times each song has been played",
+        "repo": "https://github.com/dupitydumb/play-counter",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "player:read",
+          "storage:local",
+          "ui:inject"
+        ],
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/play-counter",
+        "category": "library",
+        "tags": [
+          "stats",
+          "play-count",
+          "analytics"
+        ],
+        "min_version": null,
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/play-counter",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/play-counter/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-13T16:42:03Z"
+    },
+    {
+      "manifest": {
+        "name": "Plex Search",
+        "version": "1.0.0",
+        "author": "You",
+        "description": "Browse and stream music from your Plex Media Server",
+        "repo": "https://github.com/dupitydumb/Plex-Search",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/Plex-Search",
+        "category": "library",
+        "tags": [
+          "plex",
+          "streaming",
+          "cloud",
+          "music"
+        ],
+        "min_version": null,
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Plex-Search",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-18T04:37:59Z"
+    },
+    {
+      "manifest": {
+        "name": "Qubuz Search",
+        "version": "2.1.6",
+        "author": "Audion Team & Smile Of Heaven",
+        "description": "Search and browse tracks from the Qubuz catalog",
+        "repo": "https://github.com/dupitydumb/qobuz-player",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "library:write",
+          "library:read",
+          "settings:write",
+          "library:downloadTrack"
+        ],
+        "ui_slots": [],
+        "icon": "icon.png",
+        "homepage": "https://github.com/dupitydumb/qobuz-player",
+        "category": "library",
+        "tags": [
+          "search",
+          "qubuz",
+          "streaming",
+          "music"
+        ],
+        "min_version": null,
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/qobuz-player",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-06-19T06:15:40Z"
+    },
+    {
+      "manifest": {
+        "name": "Online Radio",
+        "version": "1.0.0",
+        "author": "You",
+        "description": "Stream hundreds of live radio stations from around the world, grouped by region and country. Includes genre filtering, favorites, and custom station support.",
+        "repo": "https://github.com/dupitydumb/Radio-Stream",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "player:control",
+          "player:read",
+          "storage:local"
+        ],
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/Radio-Stream",
+        "category": "library",
+        "tags": [
+          "radio",
+          "live",
+          "streaming",
+          "online",
+          "stations",
+          "world"
+        ],
+        "min_version": null,
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/Radio-Stream",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-02-24T09:31:48Z"
+    },
+    {
+      "manifest": {
+        "name": "Saavan Manager",
+        "version": "0.1.0",
+        "author": "Antigravity",
+        "description": "Scan library for non-Saavan songs and find Saavan versions.",
+        "repo": "https://github.com/dupitydumb/saavan-manager",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/saavan-manager/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "library:read",
+          "library:write",
+          "network:fetch",
+          "ui:inject",
+          "storage:local"
+        ],
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/saavan-manager",
+        "category": "utility",
+        "tags": [
+          "saavan",
+          "library",
+          "manager",
+          "converter"
+        ],
+        "min_version": null,
+        "license": null
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/saavan-manager",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/saavan-manager/main/plugin.json",
+      "stars": 0,
+      "downloads": 0,
+      "lastUpdated": "2026-05-05T14:39:05Z"
+    },
+    {
+      "manifest": {
+        "name": "Spotify Converter",
+        "version": "2.0.6",
+        "author": "Audion Team",
+        "description": "Convert Spotify playlists to Audion playlists using Plugins",
+        "repo": "https://github.com/dupitydumb/spotify-to-audion",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "network:fetch",
+          "ui:inject",
+          "library:write",
+          "library:read",
+          "storage:local"
+        ],
+        "ui_slots": null,
+        "icon": "icon.png",
+        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
+        "category": "utility",
+        "tags": [
+          "converter",
+          "spotify",
+          "playlist"
+        ],
+        "min_version": null,
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/spotify-to-audion",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-05-09T17:16:47Z"
+    },
+    {
+      "manifest": {
+        "name": "Theme Customizer",
+        "version": "1.0.3",
+        "author": "Audion Team",
+        "description": "Transform Audion's look with stunning visual themes - from cyberpunk neon to cozy warmth",
+        "repo": "https://github.com/dupitydumb/theme-customizer",
+        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/theme-customizer/main/plugin.json",
+        "type": "js",
+        "entry": "index.js",
+        "permissions": [
+          "ui:inject",
+          "storage:local"
+        ],
+        "ui_slots": null,
+        "icon": null,
+        "homepage": "https://github.com/dupitydumb/theme-customizer",
+        "category": "appearance",
+        "tags": [
+          "theme",
+          "customization",
+          "appearance",
+          "colors",
+          "ui"
+        ],
+        "min_version": null,
+        "license": "MIT"
+      },
+      "curated": false,
+      "verified": false,
+      "repo": "https://github.com/dupitydumb/theme-customizer",
+      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/theme-customizer/main/plugin.json",
+      "stars": 1,
+      "downloads": 0,
+      "lastUpdated": "2026-02-13T16:41:06Z"
     },
     {
       "manifest": {
@@ -209,6 +560,7 @@
           "artists",
           "trending"
         ],
+        "min_version": null,
         "license": "MIT"
       },
       "curated": false,
@@ -217,139 +569,47 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/youtub-music/main/plugin.json",
       "stars": 1,
       "downloads": 0,
-      "lastUpdated": "2026-11-10T06:48:08Z"
+      "lastUpdated": "2026-11-19T14:19:06Z"
     },
     {
       "manifest": {
-        "name": "Spotify Converter",
-        "version": "2.0.6",
-        "author": "Audion Team",
-        "description": "Convert Spotify playlists to Audion playlists using Plugins",
-        "repo": "https://github.com/dupitydumb/spotify-to-audion",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
+        "name": "Saavan Search",
+        "version": "0.1.2",
+        "author": "Golden Sparrow",
+        "description": "Search the Saavan",
+        "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
         "type": "js",
         "entry": "index.js",
         "permissions": [
           "network:fetch",
           "ui:inject",
+          "player:control",
           "library:write",
           "library:read",
-          "storage:local"
+          "settings:write",
+          "library:downloadTrack"
         ],
-        "ui_slots": null,
-        "icon": "icon.png",
-        "homepage": "https://github.com/dupitydumb/spotify-to-audion",
-        "category": "utility",
+        "ui_slots": [],
+        "icon": null,
+        "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+        "category": "library",
         "tags": [
-          "converter",
-          "spotify",
-          "playlist"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/spotify-to-audion",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/spotify-to-audion/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-05-09T17:16:50Z"
-    },
-    {
-      "manifest": {
-        "name": "Last.fm Scrobbler",
-        "version": "2.0.1",
-        "author": "You",
-        "description": "Scrobbles your listening history to Last.fm. Supports real-time now-playing, offline queue, and one-click import of your existing Audion play history.",
-        "repo": "https://github.com/dupitydumb/last.fm-scrobbler",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/last.fm-scrobbler/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:read",
-          "storage:local",
-          "library:read"
-        ],
-        "homepage": "https://github.com/dupitydumb/last.fm-scrobbler",
-        "category": "utility",
-        "tags": [
-          "lastfm",
-          "scrobble",
-          "history",
-          "stats",
-          "social"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/last.fm-scrobbler",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/last.fm-scrobbler/main/plugin.json",
-      "stars": 1,
-      "downloads": 0,
-      "lastUpdated": "2026-04-27T10:30:19Z"
-    },
-    {
-      "manifest": {
-        "name": "iTunes Metadata",
-        "version": "1.0.0",
-        "author": "Audion Community",
-        "description": "Reference MetadataProvider searching global catalogs, fetching high-res covers, and providing rich track, album, and artist metadata.",
-        "repo": "https://github.com/dupitydumb/itunes-meta",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/itunes-meta/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/itunes-meta",
-        "category": "metadata",
-        "tags": [
-          "metadata",
-          "catalog",
           "search",
-          "cover-art"
+          "saavan",
+          "streaming",
+          "music"
         ],
+        "min_version": null,
         "license": "MIT"
       },
       "curated": false,
       "verified": false,
-      "repo": "https://github.com/dupitydumb/itunes-meta",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/itunes-meta/main/plugin.json",
-      "stars": 0,
+      "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
+      "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
+      "stars": 2,
       "downloads": 0,
-      "lastUpdated": "2026-11-19T14:17:35Z"
-    },
-    {
-      "manifest": {
-        "name": "Cover Fetch",
-        "version": "1.0.0",
-        "author": "Audion Community",
-        "description": "Automatically fetch missing album covers from musichoarders.xyz",
-        "repo": "https://github.com/dupitydumb/cover-fetch",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "library:read",
-          "library:write",
-          "network:fetch",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/cover-fetch",
-        "category": "library"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/cover-fetch",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/cover-fetch/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-03-08T17:41:11Z"
+      "lastUpdated": "2026-07-03T09:27:32Z"
     },
     {
       "manifest": {
@@ -371,6 +631,8 @@
           "network:fetch",
           "system:notify"
         ],
+        "ui_slots": null,
+        "icon": null,
         "homepage": "https://github.com/kesavarajsamipillai/audion-companion",
         "category": "utility",
         "tags": [
@@ -381,6 +643,7 @@
           "scrobbler",
           "utility"
         ],
+        "min_version": null,
         "license": "MIT"
       },
       "curated": false,
@@ -389,7 +652,7 @@
       "manifest_url": "https://raw.githubusercontent.com/kesavarajsamipillai/audion-companion/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-09-29T13:57:35Z"
+      "lastUpdated": "2026-09-28T18:55:15Z"
     },
     {
       "manifest": {
@@ -411,6 +674,8 @@
           "player:control",
           "system:notify"
         ],
+        "ui_slots": null,
+        "icon": null,
         "homepage": "https://github.com/kesavarajsamipillai/spotify-universal-importer",
         "category": "utility",
         "tags": [
@@ -421,6 +686,7 @@
           "single-track",
           "downloader"
         ],
+        "min_version": null,
         "license": "MIT"
       },
       "curated": false,
@@ -429,115 +695,7 @@
       "manifest_url": "https://raw.githubusercontent.com/kesavarajsamipillai/spotify-universal-importer/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-09-29T18:58:44Z"
-    },
-    {
-      "manifest": {
-        "name": "Test Plugin. DO NOT INSTALL",
-        "version": "2.0.5",
-        "author": "Smile of Heaven",
-        "description": "plugin made for testing and experimenting. do not install",
-        "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-        "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/SmileofHaven/audion-spotify-test",
-        "category": "utility",
-        "tags": [
-          "test"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/SmileofHaven/audion-spotify-test",
-      "manifest_url": "https://raw.githubusercontent.com/SmileofHaven/audion-spotify-test/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-04-25T13:24:31Z"
-    },
-    {
-      "manifest": {
-        "name": "Online Radio",
-        "version": "1.0.0",
-        "author": "You",
-        "description": "Stream hundreds of live radio stations from around the world, grouped by region and country. Includes genre filtering, favorites, and custom station support.",
-        "repo": "https://github.com/dupitydumb/Radio-Stream",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "player:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/Radio-Stream",
-        "category": "library",
-        "tags": [
-          "radio",
-          "live",
-          "streaming",
-          "online",
-          "stations",
-          "world"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Radio-Stream",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-02-24T09:31:52Z"
-    },
-    {
-      "manifest": {
-        "name": "Qubuz Search",
-        "version": "2.1.6",
-        "author": "Audion Team & Smile Of Heaven",
-        "description": "Search and browse tracks from the Qubuz catalog",
-        "repo": "https://github.com/dupitydumb/qobuz-player",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "settings:write",
-          "library:downloadTrack"
-        ],
-        "ui_slots": [],
-        "icon": "icon.png",
-        "homepage": "https://github.com/dupitydumb/qobuz-player",
-        "category": "library",
-        "tags": [
-          "search",
-          "qubuz",
-          "streaming",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/qobuz-player",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/qobuz-player/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-06-19T06:15:43Z"
+      "lastUpdated": "2026-09-29T18:58:20Z"
     },
     {
       "manifest": {
@@ -559,6 +717,8 @@
           "storage:local",
           "system:notify"
         ],
+        "ui_slots": null,
+        "icon": null,
         "homepage": "https://github.com/kipavy/audion-universal-music-source",
         "category": "audio",
         "tags": [
@@ -571,6 +731,7 @@
           "deezer",
           "amazon-music"
         ],
+        "min_version": null,
         "license": "MIT"
       },
       "curated": false,
@@ -579,149 +740,7 @@
       "manifest_url": "https://raw.githubusercontent.com/kipavy/audion-universal-music-source/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-08-03T15:37:14Z"
-    },
-    {
-      "manifest": {
-        "name": "Lyrics Romanization",
-        "version": "0.1.0",
-        "author": "Audion Community",
-        "description": "Displays romanized lyrics in a synced plugin panel",
-        "repo": "https://github.com/dupitydumb/lyrics-romanization",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "player:read",
-          "ui:inject",
-          "storage:local",
-          "network:fetch"
-        ],
-        "homepage": "https://github.com/dupitydumb/lyrics-romanization",
-        "category": "appearance",
-        "tags": [
-          "lyrics",
-          "romanization",
-          "japanese"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/lyrics-romanization",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/lyrics-romanization/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-04-20T06:51:28Z"
-    },
-    {
-      "manifest": {
-        "name": "Custom Cloud Source",
-        "version": "1.0.1",
-        "author": "M",
-        "description": "Connect any cloud storage, personal server, or media library as a music source. Supports URL patterns, HTTP headers, and custom auth — no coding required.",
-        "repo": "https://github.com/dupitydumb/could-stream",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/could-stream",
-        "category": "library",
-        "tags": [
-          "cloud",
-          "custom",
-          "server",
-          "streaming",
-          "s3",
-          "webdav",
-          "http"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/could-stream",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/could-stream/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-02-22T09:25:07Z"
-    },
-    {
-      "manifest": {
-        "name": "Saavan Manager",
-        "version": "0.1.0",
-        "author": "Antigravity",
-        "description": "Scan library for non-Saavan songs and find Saavan versions.",
-        "repo": "https://github.com/dupitydumb/saavan-manager",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/saavan-manager/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "library:read",
-          "library:write",
-          "network:fetch",
-          "ui:inject",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/saavan-manager",
-        "category": "utility",
-        "tags": [
-          "saavan",
-          "library",
-          "manager",
-          "converter"
-        ]
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/saavan-manager",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/saavan-manager/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-05-05T14:41:32Z"
-    },
-    {
-      "manifest": {
-        "name": "Plex Search",
-        "version": "1.0.0",
-        "author": "You",
-        "description": "Browse and stream music from your Plex Media Server",
-        "repo": "https://github.com/dupitydumb/Plex-Search",
-        "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
-        "type": "js",
-        "entry": "index.js",
-        "permissions": [
-          "network:fetch",
-          "ui:inject",
-          "player:control",
-          "library:write",
-          "library:read",
-          "storage:local"
-        ],
-        "homepage": "https://github.com/dupitydumb/Plex-Search",
-        "category": "library",
-        "tags": [
-          "plex",
-          "streaming",
-          "cloud",
-          "music"
-        ],
-        "license": "MIT"
-      },
-      "curated": false,
-      "verified": false,
-      "repo": "https://github.com/dupitydumb/Plex-Search",
-      "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Plex-Search/main/plugin.json",
-      "stars": 0,
-      "downloads": 0,
-      "lastUpdated": "2026-02-18T04:38:13Z"
+      "lastUpdated": "2026-08-03T13:39:52Z"
     }
   ]
 }

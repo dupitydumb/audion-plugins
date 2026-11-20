@@ -3,7 +3,14 @@
     "version": "1.0.0",
     "description": "Automated plugin registry for Audion",
     "scripts": {
-        "build": "node scripts/build-registry.js"
+        "build": "node scripts/build-registry.js",
+        "build:dry": "node scripts/build-registry.js --dry-run",
+        "validate": "node scripts/build-registry.js --validate",
+        "test": "node scripts/test-build.js && node scripts/test-integration.js",
+        "check": "npm run validate && npm test"
     },
-    "private": true
+    "private": true,
+    "engines": {
+        "node": ">=20"
+    }
 }

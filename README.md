@@ -166,7 +166,7 @@ The `plugin.json` file is the entry point for your plugin. It defines metadata, 
 | `manifest_url` | `string` | URL to hosted manifest |
 | `icon` | `string` | Path to icon file |
 | `homepage` | `string` | Plugin website URL |
-| `category` | `string` | Category: `audio`, `ui`, `lyrics`, `library`, or `utility` |
+| `category` | `string` | Category: `audio`, `ui`, `lyrics`, `library`, `utility`, `appearance`, `social`, `sync`, or `metadata` |
 | `tags` | `string[]` | Searchable tags |
 | `min_version` | `string` | Minimum Audion version required |
 | `license` | `string` | License identifier (e.g., "MIT") |
@@ -1110,6 +1110,23 @@ Use semantic versioning and update when you make changes:
 
 ## Distribution
 
+### How the Registry Works
+
+The marketplace index is generated automatically from GitHub. The workflow in
+`.github/workflows/main.yml`:
+
+1. Searches GitHub for every repo carrying the `audion-plugins` topic
+2. Fetches and validates each repo's `plugin.json`
+3. Applies the manual overlays in `curated.json` and `blocked.json`
+4. Writes `registry/main/registry.json`
+
+It runs every six hours, and can be triggered immediately by sending a
+`repository_dispatch` event of type `plugin-released`. A build that changes
+nothing writes nothing, so quiet periods produce no commits.
+
+Plugins are listed in a deterministic order (featured first, then by repository
+URL), so unrelated plugins never shuffle around between builds.
+
 ### Publishing Your Plugin
 
 1. **Create a GitHub repository** for your plugin
@@ -1123,6 +1140,64 @@ Use semantic versioning and update when you make changes:
 4. **Ensure your `plugin.json` is valid** and contains all necessary metadata for the marketplace indexer
 5. **Tag releases** using Git tags (e.g., `v1.0.0`)
 6. **Host plugin.json** with a `manifest_url` field pointing to the raw GitHub URL
+
+Your plugin appears in the registry within six hours of adding the topic. To
+trigger a rebuild immediately (for example right after a release), send:
+
+```bash
+gh api repos/dupitydumb/audion-plugins/dispatches \
+  -f event_type=plugin-released
+```
+
+### Registry Maintenance
+
+Two files in the repository root control what appears in the marketplace. They
+are read on every build, so edits there survive rebuilds — the generated
+`registry.json` is never edited by hand.
+
+**`blocked.json`** — repos, authors or plugin names that must never be listed:
+
+```json
+{
+  "repos": ["github.com/someone/bad-plugin"],
+  "authors": [],
+  "names": ["Test Plugin. DO NOT INSTALL"]
+}
+```
+
+**`curated.json`** — flags and overrides for specific plugins:
+
+```json
+{
+  "plugins": {
+    "https://github.com/someone/great-plugin": {
+      "curated": true,
+      "verified": true,
+      "featured": true,
+      "category": "audio",
+      "description": "Overrides the plugin's own description"
+    }
+  }
+}
+```
+
+Supported keys: `curated`, `verified`, `featured`, `hidden`, `note`, plus
+`name`, `description`, `category`, `tags`, `homepage` and `icon` overrides.
+
+Repos are matched case-insensitively, ignoring `.git` and trailing slashes.
+
+### Running the Build Locally
+
+```bash
+npm run validate    # check curated.json and blocked.json
+npm test            # offline tests, no API calls
+npm run build       # full rebuild (uses GITHUB_TOKEN if set)
+npm run build:dry   # rebuild without writing files
+```
+
+The build aborts rather than publish if the plugin count drops by more than 20%,
+which is what a GitHub API outage looks like. Pass `--force` (or tick the
+`force` box when running the workflow manually) when removals are intentional.
 
 ### Example plugin.json with Updates
 

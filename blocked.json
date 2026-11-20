@@ -1,0 +1,10 @@
+{
+    "_comment": "Repos, authors and plugin names that must never appear in the registry. Matching is case-insensitive. Authors and names block every plugin by that author / with that display name, so use them only when the repo URL alone is not enough.",
+    "repos": [
+        "github.com/SmileofHaven/audion-spotify-test"
+    ],
+    "authors": [],
+    "names": [
+        "Test Plugin. DO NOT INSTALL"
+    ]
+}

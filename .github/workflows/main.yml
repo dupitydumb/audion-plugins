@@ -1,33 +1,59 @@
 name: Update Plugin Registry
 
 on:
-  workflow_dispatch:   # Allows manual run button
+  # Rebuild on a schedule. Six-hourly is enough to pick up new plugins and
+  # version bumps without committing noise; the build is a no-op when nothing
+  # changed, so most runs produce no commit at all.
+  schedule:
+    - cron: '17 */6 * * *'
+
+  # Instant re-index: plugin authors (or the app) can POST a
+  # repository_dispatch with type "plugin-released" to refresh within seconds.
+  repository_dispatch:
+    types: [plugin-released]
+
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Publish even if the safety guard trips (use only when plugins were genuinely removed)'
+        type: boolean
+        default: false
+
+# Never let two builds race for the same push.
+concurrency:
+  group: update-registry
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
   update-registry:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
+
     steps:
       - name: Checkout registry repo
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      
-      - name: Install dependencies
-        run: npm install
-      
-      - name: Search and build registry
+
+      - name: Validate overlay files
+        run: node scripts/build-registry.js --validate
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/build-registry.js
-      
+        run: node scripts/build-registry.js ${{ inputs.force && '--force' || '' }}
+
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-update plugin registry"
-          file_pattern: "registry/main/registry.json"
+          commit_message: 'chore: update plugin registry'
+          commit_author: 'audion-registry-bot <bot@users.noreply.github.com>'
+          file_pattern: 'registry/main/registry.json'

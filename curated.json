@@ -1,0 +1,12 @@
+{
+    "_comment": "Manual curation for the Audion plugin registry. The registry is rebuilt from scratch on every run; anything you set here survives. Match plugins by repo URL (case-insensitive, .git and trailing slash ignored).",
+    "_fields": {
+        "curated": "Shown with a curated badge",
+        "verified": "Manually reviewed by the Audion team",
+        "featured": "Pinned to the top of the marketplace",
+        "hidden": "Kept out of the registry without blocking the repo",
+        "note": "Internal note, published as `note` on the entry",
+        "name / description / category / tags / homepage / icon": "Override the value from the plugin's own plugin.json"
+    },
+    "plugins": {}
+}

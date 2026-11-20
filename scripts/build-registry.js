@@ -1,220 +1,288 @@
+#!/usr/bin/env node
+'use strict';
+
 /**
- * Build Registry Script
- * 
- * Searches GitHub for repos with the 'audion-plugins' topic,
- * validates their plugin.json, and builds the registry.json
+ * Build Registry
+ *
+ * Discovers GitHub repos carrying the `audion-plugins` topic, validates their
+ * plugin.json, and writes registry/main/registry.json.
+ *
+ * Curation and blocking live in curated.json / blocked.json and are merged in
+ * here, so a rebuild can never erase a maintainer's decisions.
+ *
+ * Modes:
+ *   (default)   full discovery + build
+ *   --validate  validate the overlay files and exit
+ *   --dry-run   build and report, write nothing
+ *   --force     publish even if the safety guards would abort
  */
 
-const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const GITHUB_API = 'api.github.com';
+const github = require('./lib/github');
+const manifestLib = require('./lib/manifest');
+const overlays = require('./lib/overlays');
+const guards = require('./lib/guards');
+
 const TOPIC = 'audion-plugins';
-const OUTPUT_PATH = path.join(__dirname, '..', 'registry', 'main', 'registry.json');
+const OUTPUT_DIR = process.env.AUDION_REGISTRY_OUTPUT
+    ? path.resolve(process.env.AUDION_REGISTRY_OUTPUT)
+    : path.join(__dirname, '..', 'registry', 'main');
+const REGISTRY_PATH = path.join(OUTPUT_DIR, 'registry.json');
 
-// Required fields in plugin.json
-const REQUIRED_FIELDS = ['name', 'version', 'author', 'type', 'entry', 'permissions'];
-const VALID_TYPES = ['js', 'wasm'];
-const VALID_CATEGORIES = ['audio', 'ui', 'lyrics', 'library', 'utility', 'appearance', 'social', 'sync'];
+const args = new Set(process.argv.slice(2));
+const MODE = {
+    validate: args.has('--validate'),
+    dryRun: args.has('--dry-run'),
+    force: args.has('--force'),
+};
 
-function httpsGet(options) {
-    return new Promise((resolve, reject) => {
-        const req = https.request(options, (res) => {
-            let data = '';
-            res.on('data', chunk => data += chunk);
-            res.on('end', () => {
-                try {
-                    resolve({ status: res.statusCode, data: JSON.parse(data) });
-                } catch {
-                    resolve({ status: res.statusCode, data });
-                }
-            });
-        });
-        req.on('error', reject);
-        req.end();
+const token = process.env.GITHUB_TOKEN || undefined;
+
+const log = (...parts) => console.log(...parts);
+const warn = (...parts) => console.warn(...parts);
+
+function fail(message) {
+    console.error(`\n✖ ${message}`);
+    process.exit(1);
+}
+
+function readJsonIfExists(filePath) {
+    if (!fs.existsSync(filePath)) return null;
+    try {
+        return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    } catch (err) {
+        throw new Error(`${path.basename(filePath)} exists but is not valid JSON: ${err.message}`);
+    }
+}
+
+function writeJsonIfChanged(filePath, value) {
+    const next = `${JSON.stringify(value, null, 2)}\n`;
+    const current = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : null;
+
+    if (current !== null) {
+        try {
+            if (JSON.stringify(JSON.parse(current)) === JSON.stringify(value)) return false;
+        } catch {
+            // Unparseable existing file: fall through and overwrite it.
+        }
+    }
+
+    if (MODE.dryRun) {
+        log(`   [dry-run] would write ${path.relative(process.cwd(), filePath)}`);
+        return true;
+    }
+
+    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    fs.writeFileSync(filePath, next);
+    return true;
+}
+
+/** Ignore the build timestamp when deciding whether anything really changed. */
+function sameCatalog(a, b) {
+    return JSON.stringify({ ...a, updated_at: null }) === JSON.stringify({ ...b, updated_at: null });
+}
+
+function sortPlugins(plugins) {
+    // Deterministic order: featured first, then by repo URL. Search results are
+    // star-ranked and reshuffle constantly, which used to rewrite the file.
+    return [...plugins].sort((a, b) => {
+        const featured = Number(Boolean(b.featured)) - Number(Boolean(a.featured));
+        if (featured !== 0) return featured;
+        return a.repo.toLowerCase() < b.repo.toLowerCase() ? -1 : 1;
     });
 }
 
-// Helper for GitHub API requests with auth
-async function githubFetch(path) {
-    const headers = {
-        'User-Agent': 'Audion-Registry-Builder',
-        'Accept': 'application/vnd.github.v3+json'
+function buildManifest(manifest, repo) {
+    const manifestUrl = `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch}/plugin.json`;
+    const category = manifestLib.VALID_CATEGORIES.includes(manifest.category)
+        ? manifest.category
+        : manifestLib.DEFAULT_CATEGORY;
+
+    return {
+        name: manifest.name,
+        version: manifest.version,
+        author: manifest.author,
+        description: manifest.description || '',
+        repo: repo.html_url,
+        manifest_url: manifestUrl,
+        type: manifest.type,
+        entry: manifest.entry,
+        permissions: manifest.permissions,
+        ui_slots: manifest.ui_slots ?? null,
+        icon: manifest.icon ?? null,
+        homepage: manifest.homepage || repo.html_url,
+        category,
+        tags: Array.isArray(manifest.tags) ? manifest.tags : [],
+        min_version: manifest.min_version ?? null,
+        license: manifest.license || repo.license?.spdx_id || null,
     };
-    
-    if (process.env.GITHUB_TOKEN) {
-        headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
-    }
-    
-    const options = {
-        hostname: GITHUB_API,
-        path,
-        headers
-    };
-
-    return await httpsGet(options);
 }
 
-async function searchRepos() {
-    console.log(`Searching GitHub for repos with topic: ${TOPIC}`);
-    const response = await githubFetch(`/search/repositories?q=topic:${TOPIC}&sort=stars&order=desc&per_page=100`);
-
-    if (response.status !== 200) {
-        throw new Error(`GitHub API error: ${response.status}`);
+function checkGuards(previous, plugins, curated, blocked) {
+    if (MODE.force) {
+        warn('   ! --force given, skipping safety guards');
+        return;
     }
 
-    console.log(`Found ${response.data.total_count} repos`);
-    return response.data.items || [];
-}
+    const result = guards.checkGuards(previous, plugins, curated, blocked, overlays);
+    if (result.ok) return;
 
-async function fetchReleaseDownloads(repo) {
-    console.log(`  📊 Fetching release downloads for ${repo.full_name}...`);
-    const response = await githubFetch(`/repos/${repo.full_name}/releases`);
-    
-    if (response.status !== 200) return 0;
-    
-    let totalDownloads = 0;
-    if (Array.isArray(response.data)) {
-        for (const release of response.data) {
-            if (release.assets && Array.isArray(release.assets)) {
-                for (const asset of release.assets) {
-                    totalDownloads += (asset.download_count || 0);
-                }
-            }
-        }
-    }
-    return totalDownloads;
-}
+    for (const repoUrl of result.missing.slice(0, 10)) warn(`   - missing: ${repoUrl}`);
+    if (result.missing.length > 10) warn(`   - ...and ${result.missing.length - 10} more`);
 
-async function fetchPluginManifest(repo) {
-    const options = {
-        hostname: 'raw.githubusercontent.com',
-        path: `/${repo.full_name}/${repo.default_branch}/plugin.json`,
-        headers: {
-            'User-Agent': 'Audion-Registry-Builder'
-        }
-    };
-
-    const response = await httpsGet(options);
-
-    if (response.status !== 200) {
-        return null;
-    }
-
-    return response.data;
-}
-
-function validateManifest(manifest) {
-    if (!manifest || typeof manifest !== 'object') {
-        return { valid: false, error: 'Invalid JSON' };
-    }
-
-    // Check required fields
-    for (const field of REQUIRED_FIELDS) {
-        if (!manifest[field]) {
-            return { valid: false, error: `Missing required field: ${field}` };
-        }
-    }
-
-    // Validate type
-    if (!VALID_TYPES.includes(manifest.type)) {
-        return { valid: false, error: `Invalid type: ${manifest.type}` };
-    }
-
-    // Validate permissions is array
-    if (!Array.isArray(manifest.permissions)) {
-        return { valid: false, error: 'Permissions must be an array' };
-    }
-
-    return { valid: true };
+    fail(
+        `Safety guard tripped: ${result.problems.join('; ')}.\n` +
+            `   This usually means a GitHub API problem, not real plugin removals.\n` +
+            `   Re-run with --force if the removals are intentional.`
+    );
 }
 
 async function buildRegistry() {
-    const repos = await searchRepos();
+    const previous = readJsonIfExists(REGISTRY_PATH);
+    const curated = overlays.loadCurated();
+    const blocked = overlays.loadBlocked();
+
+    log(`Searching GitHub for repos with topic: ${TOPIC}`);
+    const repos = await github.searchTopicRepos({ topic: TOPIC, token });
+    log(`Found ${repos.length} repos\n`);
+
     const plugins = [];
 
     for (const repo of repos) {
-        console.log(`\nChecking: ${repo.full_name}`);
+        log(`Checking: ${repo.full_name}`);
 
-        try {
-            const manifest = await fetchPluginManifest(repo);
+        // A transport failure here must abort the run. Swallowing it is how a
+        // rate-limit storm used to publish a registry with plugins missing.
+        const { manifest, reason } = await manifestLib.fetchManifest(repo);
 
-            if (!manifest) {
-                console.log(`  ❌ No plugin.json found`);
-                continue;
-            }
+        if (!manifest) {
+            log(`  – skipped: ${reason}`);
+            continue;
+        }
 
-            const validation = validateManifest(manifest);
+        const validation = manifestLib.validateManifest(manifest);
 
-            if (!validation.valid) {
-                console.log(`  ❌ Invalid manifest: ${validation.error}`);
-                continue;
-            }
+        for (const warning of validation.warnings) {
+            warn(`  ! ${manifest.name || repo.full_name}: ${warning}`);
+        }
 
-            console.log(`  ✅ Valid plugin: ${manifest.name}`);
+        if (!validation.ok) {
+            log(`  ✖ invalid manifest: ${validation.errors.join('; ')}`);
+            continue;
+        }
 
-            // Fetch live stats
-            const downloads = await fetchReleaseDownloads(repo);
+        if (
+            overlays.isBlocked(blocked, {
+                repoUrl: repo.html_url,
+                author: manifest.author,
+                name: manifest.name,
+            })
+        ) {
+            log(`  – blocked by blocked.json`);
+            continue;
+        }
 
-            // Build plugin entry
-            plugins.push({
-                manifest: {
-                    name: manifest.name,
-                    version: manifest.version,
-                    author: manifest.author,
-                    description: manifest.description || '',
-                    repo: repo.html_url,
-                    manifest_url: `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch}/plugin.json`,
-                    type: manifest.type,
-                    entry: manifest.entry,
-                    permissions: manifest.permissions,
-                    ui_slots: manifest.ui_slots,
-                    icon: manifest.icon,
-                    homepage: manifest.homepage || repo.html_url,
-                    category: manifest.category || 'utility',
-                    tags: manifest.tags,
-                    license: manifest.license || repo.license?.spdx_id
-                },
-                curated: false,
-                verified: false,
-                repo: repo.html_url,
-                manifest_url: `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch}/plugin.json`,
-                stars: repo.stargazers_count,
-                downloads: downloads,
-                lastUpdated: repo.updated_at
+        log(`  ✓ ${manifest.name}@${manifest.version}`);
+
+        // Stats are advisory. A failure here degrades the numbers, not the
+        // catalog, so fall back to the previous value rather than aborting.
+        const previousEntry = previous?.plugins?.find((p) => p.repo === repo.html_url);
+        const downloads = await github
+            .getReleaseDownloads(repo.full_name, { token })
+            .catch((err) => {
+                warn(`  ! download stats unavailable: ${err.message}`);
+                return previousEntry?.downloads ?? 0;
             });
 
-        } catch (err) {
-            console.log(`  ❌ Error: ${err.message}`);
+        const entry = {
+            manifest: buildManifest(manifest, repo),
+            curated: false,
+            verified: false,
+            repo: repo.html_url,
+            manifest_url: `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch}/plugin.json`,
+            stars: repo.stargazers_count || 0,
+            downloads,
+            lastUpdated: repo.pushed_at || repo.updated_at || null,
+        };
+
+        const merged = overlays.applyCuration(entry, curated.get(overlays.normaliseRepo(repo.html_url)));
+
+        if (merged === null) {
+            log(`  – hidden by curated.json`);
+            continue;
         }
+
+        plugins.push(merged);
     }
 
-    // Build registry object
-    const registry = {
-        version: '1.0.0',
+    checkGuards(previous, plugins, curated, blocked);
+
+    const sorted = sortPlugins(plugins);
+    const next = {
+        version: previous?.version || '1.0.0',
         updated_at: new Date().toISOString(),
-        plugins
+        plugins: sorted,
     };
 
-    // Ensure output directory exists
-    const outputDir = path.dirname(OUTPUT_PATH);
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir, { recursive: true });
-    }
+    // Keep the previous timestamp when nothing meaningful changed, so the file
+    // does not churn just because the job ran.
+    const unchanged = previous && sameCatalog(previous, next);
+    if (unchanged) next.updated_at = previous.updated_at;
 
-    // Write registry
-    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(registry, null, 2));
+    const written = writeJsonIfChanged(REGISTRY_PATH, next);
 
-    console.log(`\n✅ Registry built with ${plugins.length} plugins`);
-    console.log(`   Total plugins processed: ${repos.length}`);
-    console.log(`   Written to: ${OUTPUT_PATH}`);
+    log(
+        written
+            ? `\n✓ ${sorted.length} plugins — registry.json updated`
+            : `\n✓ ${sorted.length} plugins — no changes`
+    );
 
-    return registry;
+    return { plugins: sorted, written };
 }
 
-// Run
-buildRegistry().catch(err => {
-    console.error('Failed to build registry:', err);
-    process.exit(1);
-});
+function validate() {
+    const curated = overlays.loadCurated();
+    const blocked = overlays.loadBlocked();
+
+    log(`curated.json: ${curated.size} entries`);
+    log(`blocked.json: ${blocked.repos.size} repos, ${blocked.authors.size} authors, ${blocked.names.size} names`);
+
+    const registry = readJsonIfExists(REGISTRY_PATH);
+    if (registry) {
+        const plugins = Array.isArray(registry.plugins) ? registry.plugins : [];
+        log(`registry.json: ${plugins.length} plugins`);
+
+        if (!Array.isArray(registry.plugins)) fail('registry.json has no plugins array');
+
+        const duplicates = plugins
+            .map((p) => overlays.normaliseRepo(p.repo))
+            .filter((repo, i, all) => all.indexOf(repo) !== i);
+
+        if (duplicates.length > 0) fail(`duplicate plugins in registry.json: ${duplicates.join(', ')}`);
+    }
+
+    log('\n✓ overlays are valid');
+}
+
+async function main() {
+    if (MODE.validate) return validate();
+    return buildRegistry();
+}
+
+module.exports = {
+    buildRegistry,
+    sortPlugins,
+    buildManifest,
+    sameCatalog,
+    REGISTRY_PATH,
+};
+
+if (require.main === module) {
+    main().catch((err) => {
+        console.error(`\n✖ Failed: ${err.message}`);
+        if (err.stack && process.env.DEBUG) console.error(err.stack);
+        process.exit(1);
+    });
+}
