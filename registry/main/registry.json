@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-11-20T06:44:44.494Z",
+  "updated_at": "2026-11-20T20:28:30.495Z",
   "plugins": [
     {
       "manifest": {
@@ -139,8 +139,8 @@
         "min_version": null,
         "license": "MIT"
       },
-      "curated": false,
-      "verified": false,
+      "curated": true,
+      "verified": true,
       "repo": "https://github.com/dupitydumb/itunes-meta",
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/itunes-meta/main/plugin.json",
       "stars": 0,
@@ -563,8 +563,8 @@
         "min_version": null,
         "license": "MIT"
       },
-      "curated": false,
-      "verified": false,
+      "curated": true,
+      "verified": true,
       "repo": "https://github.com/dupitydumb/youtub-music",
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/youtub-music/main/plugin.json",
       "stars": 1,
