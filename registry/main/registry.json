@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-11-20T20:28:30.495Z",
+  "updated_at": "2026-11-24T15:30:25.526Z",
   "plugins": [
     {
       "manifest": {
@@ -115,7 +115,7 @@
     {
       "manifest": {
         "name": "iTunes Metadata",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "author": "Audion Community",
         "description": "Reference MetadataProvider searching global catalogs, fetching high-res covers, and providing rich track, album, and artist metadata.",
         "repo": "https://github.com/dupitydumb/itunes-meta",
@@ -127,7 +127,7 @@
           "storage:local"
         ],
         "ui_slots": null,
-        "icon": null,
+        "icon": "itunes-macos-icon.240x240.png",
         "homepage": "https://github.com/dupitydumb/itunes-meta",
         "category": "metadata",
         "tags": [
@@ -145,7 +145,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/itunes-meta/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-11-19T14:17:08Z"
+      "lastUpdated": "2026-11-24T13:27:55Z"
     },
     {
       "manifest": {
@@ -372,8 +372,8 @@
     },
     {
       "manifest": {
-        "name": "Online Radio",
-        "version": "1.0.0",
+        "name": "Radio Stream",
+        "version": "1.5.0",
         "author": "You",
         "description": "Stream hundreds of live radio stations from around the world, grouped by region and country. Includes genre filtering, favorites, and custom station support.",
         "repo": "https://github.com/dupitydumb/Radio-Stream",
@@ -387,10 +387,12 @@
           "player:read",
           "storage:local"
         ],
-        "ui_slots": null,
+        "ui_slots": [
+          "playerbar:menu"
+        ],
         "icon": null,
         "homepage": "https://github.com/dupitydumb/Radio-Stream",
-        "category": "library",
+        "category": "utility",
         "tags": [
           "radio",
           "live",
@@ -399,7 +401,7 @@
           "stations",
           "world"
         ],
-        "min_version": null,
+        "min_version": "1.5.0",
         "license": "MIT"
       },
       "curated": false,
@@ -408,7 +410,7 @@
       "manifest_url": "https://raw.githubusercontent.com/dupitydumb/Radio-Stream/main/plugin.json",
       "stars": 0,
       "downloads": 0,
-      "lastUpdated": "2026-02-24T09:31:48Z"
+      "lastUpdated": "2026-11-24T13:22:29Z"
     },
     {
       "manifest": {
@@ -574,9 +576,9 @@
     {
       "manifest": {
         "name": "Saavan Search",
-        "version": "0.1.2",
+        "version": "1.5.0",
         "author": "Golden Sparrow",
-        "description": "Search the Saavan",
+        "description": "High-quality music streaming, catalog search, and metadata from JioSaavn.",
         "repo": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
         "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
         "type": "js",
@@ -585,22 +587,28 @@
           "network:fetch",
           "ui:inject",
           "player:control",
+          "player:read",
           "library:write",
           "library:read",
           "settings:write",
-          "library:downloadTrack"
+          "library:downloadTrack",
+          "storage:local"
         ],
-        "ui_slots": [],
+        "ui_slots": [
+          "playerbar:menu"
+        ],
         "icon": null,
         "homepage": "https://github.com/Ek-Prem-Gatha/Saavan-Search",
-        "category": "library",
+        "category": "utility",
         "tags": [
           "search",
           "saavan",
+          "jiosaavn",
           "streaming",
-          "music"
+          "music",
+          "bollywood"
         ],
-        "min_version": null,
+        "min_version": "1.5.0",
         "license": "MIT"
       },
       "curated": false,
@@ -609,7 +617,7 @@
       "manifest_url": "https://raw.githubusercontent.com/Ek-Prem-Gatha/Saavan-Search/main/plugin.json",
       "stars": 2,
       "downloads": 0,
-      "lastUpdated": "2026-07-03T09:27:32Z"
+      "lastUpdated": "2026-11-24T12:45:40Z"
     },
     {
       "manifest": {
